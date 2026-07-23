@@ -37,6 +37,27 @@ def test_pool_enriches_legacy_record() -> None:
     assert len(rows[0]["observation_id"]) == 64
 
 
+def test_pool_preserves_existing_provenance() -> None:
+    record = {
+        "question_id": "q1",
+        "model": "openai/example",
+        "output_format": "winner_only",
+        "status": "ok",
+        "forecast": {"winner_probabilities": [], "rationale": ""},
+        "usage": {"input_tokens": 100, "output_tokens": 20},
+        "benchmark_version": "old-version",
+        "question_sha256": "old-question-hash",
+        "inference_config": {"adapter_version": "old-adapter"},
+        "inference_config_sha256": "old-config-hash",
+        "observation_id": "old-observation-id",
+    }
+    rows = pool_records([[record]], [QUESTION], [SPEC])
+    assert rows[0]["benchmark_version"] == "old-version"
+    assert rows[0]["question_sha256"] == "old-question-hash"
+    assert rows[0]["inference_config"]["adapter_version"] == "old-adapter"
+    assert rows[0]["observation_id"] == "old-observation-id"
+
+
 def test_cost_and_manifest_coverage() -> None:
     record = {
         "question_id": "q1",

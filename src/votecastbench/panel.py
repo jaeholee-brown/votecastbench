@@ -29,10 +29,11 @@ def enrich_record(
         SYSTEM_PROMPT,
         build_user_prompt(question, output_format),
     )
+    generated = provenance_fields(question, spec, output_format, digest)
     return {
+        **generated,
         **record,
         "prompt_sha256": digest,
-        **provenance_fields(question, spec, output_format, digest),
     }
 
 

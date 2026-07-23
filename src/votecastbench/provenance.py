@@ -26,10 +26,14 @@ def inference_config(spec: dict[str, Any]) -> dict[str, Any]:
     if provider == "openai":
         adapter_version = "openai-responses-v1"
     elif spec.get("structured_output"):
-        adapter_version = "anthropic-messages-structured-v1"
+        schema_mode = str(spec.get("anthropic_schema_mode", "exact"))
+        if schema_mode == "portable":
+            adapter_version = "anthropic-messages-structured-portable-v2"
+        else:
+            adapter_version = "anthropic-messages-structured-v1"
     else:
         adapter_version = "anthropic-messages-v1"
-    return {
+    config = {
         "provider": provider,
         "requested_model": spec["model"],
         "adapter_version": adapter_version,
@@ -40,6 +44,9 @@ def inference_config(spec: dict[str, Any]) -> dict[str, Any]:
         "structured_output": bool(spec.get("structured_output", False)),
         "max_output_tokens": int(spec.get("max_output_tokens", 12000)),
     }
+    if provider == "anthropic" and spec.get("structured_output"):
+        config["anthropic_schema_mode"] = str(spec.get("anthropic_schema_mode", "exact"))
+    return config
 
 
 def observation_id(

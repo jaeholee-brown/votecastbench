@@ -99,6 +99,7 @@
     "thinking_mode": "adaptive",
     "anthropic_effort": "xhigh",
     "structured_output": true,
+    "anthropic_schema_mode": "portable",
     "max_output_tokens": 32000,
     "pricing_usd_per_million_tokens": {"input": 2.0, "output": 10.0},
     "pricing_note": "Introductory standard-context price through 2026-08-31.",
@@ -113,6 +114,7 @@
     "thinking_mode": "adaptive",
     "anthropic_effort": "max",
     "structured_output": true,
+    "anthropic_schema_mode": "portable",
     "max_output_tokens": 12000,
     "pricing_usd_per_million_tokens": {"input": 3.0, "output": 15.0},
     "documentation": "https://platform.claude.com/docs/en/about-claude/models/overview"

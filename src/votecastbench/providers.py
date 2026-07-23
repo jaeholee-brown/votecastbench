@@ -13,7 +13,20 @@ from votecastbench.schemas import OutputFormat, forecast_json_schema
 
 
 class ProviderError(RuntimeError):
-    pass
+    """Provider failure that can retain billable metadata from a completed response."""
+
+    def __init__(
+        self,
+        message: str,
+        *,
+        usage: dict[str, Any] | None = None,
+        response_id: str | None = None,
+        resolved_model: str | None = None,
+    ) -> None:
+        super().__init__(message)
+        self.usage = usage or {}
+        self.response_id = response_id
+        self.resolved_model = resolved_model
 
 
 @dataclass(frozen=True)
@@ -35,16 +48,22 @@ def _openai_output_text(response: dict[str, Any]) -> str:
     return "".join(parts)
 
 
-def _anthropic_compatible_schema(value: Any) -> Any:
-    """Remove array bounds unsupported by Anthropic's structured-output dialect."""
+def _anthropic_compatible_schema(value: Any, *, strip_enums: bool = False) -> Any:
+    """Remove constraints unsupported or deliberately omitted from Anthropic's dialect."""
+    omitted_keys = {"minItems", "maxItems", "minimum", "maximum"}
+    if strip_enums:
+        omitted_keys.add("enum")
     if isinstance(value, dict):
         return {
-            key: _anthropic_compatible_schema(child)
+            key: _anthropic_compatible_schema(child, strip_enums=strip_enums)
             for key, child in value.items()
-            if key not in {"minItems", "maxItems", "minimum", "maximum"}
+            if key not in omitted_keys
         }
     if isinstance(value, list):
-        return [_anthropic_compatible_schema(child) for child in value]
+        return [
+            _anthropic_compatible_schema(child, strip_enums=strip_enums)
+            for child in value
+        ]
     return value
 
 
@@ -90,8 +109,17 @@ async def call_openai(
     if response.is_error:
         raise ProviderError(f"OpenAI HTTP {response.status_code}: {response.text[:1000]}")
     value = response.json()
+    try:
+        text = _openai_output_text(value)
+    except ProviderError as exc:
+        raise ProviderError(
+            str(exc),
+            usage=value.get("usage", {}),
+            response_id=value.get("id"),
+            resolved_model=value.get("model"),
+        ) from exc
     return ProviderResult(
-        text=_openai_output_text(value),
+        text=text,
         response_id=value.get("id"),
         usage=value.get("usage", {}),
         resolved_model=value.get("model"),
@@ -131,10 +159,14 @@ async def call_anthropic(
     elif thinking_mode == "manual" or thinking_budget:
         body["thinking"] = {"type": "enabled", "budget_tokens": int(thinking_budget)}
     if spec.get("structured_output"):
+        schema_mode = spec.get("anthropic_schema_mode", "exact")
         output_config: dict[str, Any] = {
             "format": {
                 "type": "json_schema",
-                "schema": _anthropic_compatible_schema(schema),
+                "schema": _anthropic_compatible_schema(
+                    schema,
+                    strip_enums=schema_mode == "portable",
+                ),
             }
         }
         if spec.get("anthropic_effort"):
@@ -157,7 +189,12 @@ async def call_anthropic(
         if block.get("type") == "text" and block.get("text")
     ]
     if not text_parts:
-        raise ProviderError("Anthropic response contained no text block")
+        raise ProviderError(
+            "Anthropic response contained no text block",
+            usage=value.get("usage", {}),
+            response_id=value.get("id"),
+            resolved_model=value.get("model"),
+        )
     return ProviderResult(
         text="".join(text_parts),
         response_id=value.get("id"),

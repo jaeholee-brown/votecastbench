@@ -44,6 +44,12 @@ def prompt_hash(system_prompt: str, user_prompt: str) -> str:
     return hashlib.sha256(f"{system_prompt}\n{user_prompt}".encode()).hexdigest()
 
 
+def _add_usage(total: dict[str, int], usage: dict[str, Any]) -> None:
+    for key, value in usage.items():
+        if isinstance(value, int) and not isinstance(value, bool):
+            total[key] = total.get(key, 0) + value
+
+
 async def _run_one(
     client: httpx.AsyncClient,
     semaphore: asyncio.Semaphore,
@@ -58,7 +64,10 @@ async def _run_one(
     provenance = provenance_fields(question, spec, output_format, digest)
     started = time.perf_counter()
     errors = []
+    attempt_log = []
+    aggregate_usage: dict[str, int] = {}
     for attempt in range(1, attempts + 1):
+        result = None
         try:
             async with semaphore:
                 result = await call_provider(
@@ -71,6 +80,16 @@ async def _run_one(
                 )
             forecast = extract_json_object(result.text)
             validate_forecast(forecast, question, output_format)
+            _add_usage(aggregate_usage, result.usage)
+            attempt_log.append(
+                {
+                    "attempt": attempt,
+                    "status": "ok",
+                    "provider_response_id": result.response_id,
+                    "resolved_model": result.resolved_model,
+                    "usage": result.usage,
+                }
+            )
             return {
                 "question_id": question["question_id"],
                 "model": spec["id"],
@@ -84,7 +103,9 @@ async def _run_one(
                 "thinking_budget_tokens": spec.get("thinking_budget_tokens"),
                 "forecast": forecast,
                 "provider_response_id": result.response_id,
-                "usage": result.usage,
+                "usage": aggregate_usage,
+                "final_attempt_usage": result.usage,
+                "attempt_log": attempt_log,
                 "attempts": attempt,
                 "latency_seconds": round(time.perf_counter() - started, 3),
                 "generated_at": datetime.now(UTC).isoformat(),
@@ -93,7 +114,30 @@ async def _run_one(
                 **provenance,
             }
         except (httpx.HTTPError, ProviderError, ValueError, KeyError, TypeError) as exc:
-            errors.append(f"{type(exc).__name__}: {exc}")
+            error = f"{type(exc).__name__}: {exc}"
+            errors.append(error)
+            usage = result.usage if result is not None else getattr(exc, "usage", {})
+            response_id = (
+                result.response_id
+                if result is not None
+                else getattr(exc, "response_id", None)
+            )
+            resolved_model = (
+                result.resolved_model
+                if result is not None
+                else getattr(exc, "resolved_model", None)
+            )
+            _add_usage(aggregate_usage, usage)
+            attempt_log.append(
+                {
+                    "attempt": attempt,
+                    "status": "error",
+                    "error": error,
+                    "provider_response_id": response_id,
+                    "resolved_model": resolved_model,
+                    "usage": usage,
+                }
+            )
             if attempt < attempts:
                 delay = min(2 ** (attempt - 1), 8) + random.random()
                 await asyncio.sleep(delay)
@@ -107,6 +151,8 @@ async def _run_one(
         "thinking_mode": spec.get("thinking_mode"),
         "anthropic_effort": spec.get("anthropic_effort"),
         "thinking_budget_tokens": spec.get("thinking_budget_tokens"),
+        "usage": aggregate_usage,
+        "attempt_log": attempt_log,
         "attempts": attempts,
         "latency_seconds": round(time.perf_counter() - started, 3),
         "generated_at": datetime.now(UTC).isoformat(),
