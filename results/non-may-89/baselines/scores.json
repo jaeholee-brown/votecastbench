@@ -1,0 +1,1447 @@
+{
+  "details": [
+    {
+      "brier_score": 1.3738077625738827,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "braintree_coggeshall_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009523809523809525
+    },
+    {
+      "brier_score": 0.5447545536097684,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "breckland_dereham-toftwood_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.4733155992456261
+    },
+    {
+      "brier_score": 0.8174996383934481,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "brighton-and-hove_goldsmid_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.2716652469943918
+    },
+    {
+      "brier_score": 0.48464810773229783,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "bury_moorside",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.42359110768085784
+    },
+    {
+      "brier_score": 1.460100429463813,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "bury_tottington_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.012494948678574317
+    },
+    {
+      "brier_score": 0.5940361665690258,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "caerphilly_van_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.4455606327609524
+    },
+    {
+      "brier_score": 0.40426386512165685,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cambridgeshire_ramsey-bury_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.4525591541109087
+    },
+    {
+      "brier_score": 0.44401103571027184,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cambridgeshire_roman-bank-peckover_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.434086491739553
+    },
+    {
+      "brier_score": 0.17070523371752974,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "camden_regents-park_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6434632149868565
+    },
+    {
+      "brier_score": 0.05224769733527634,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cardiff_splott_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.8103027098307253
+    },
+    {
+      "brier_score": 0.26215232808393346,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cherwell_kidlington-west_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5895724200533293
+    },
+    {
+      "brier_score": 0.6518393027688192,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cheshire-west-and-chester_christleton-huntington_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.299464787647761
+    },
+    {
+      "brier_score": 0.7595877197204759,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cheshire-west-and-chester_weaver-cuddington_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.2627375768885203
+    },
+    {
+      "brier_score": 1.4637666235234232,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "conwy_gogarth-mostyn_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.012473496336455623
+    },
+    {
+      "brier_score": 1.3340530906709325,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "conwy_tudno_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.012776048614198903
+    },
+    {
+      "brier_score": 0.5325068736882004,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cornwall_newquay-porth-tretherras_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.36669643853968964
+    },
+    {
+      "brier_score": 0.21101263062346962,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cotswold_st-michaels_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6614209320091673
+    },
+    {
+      "brier_score": 0.3376626689658249,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cotswold_the-beeches_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5384795778776627
+    },
+    {
+      "brier_score": 0.650252643030439,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "county-durham_murton_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.38804431847461995
+    },
+    {
+      "brier_score": 0.4059920636509839,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "dacorum_apsley-and-corner-hall_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.47557723998740903
+    },
+    {
+      "brier_score": 1.5214295516069585,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "denbighshire_llanrhaeadr-yng-nghinmeirch_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009523809523809525
+    },
+    {
+      "brier_score": 1.4684399267624304,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "denbighshire_rhyl-south_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009433962264150943
+    },
+    {
+      "brier_score": 0.4602416733354051,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "dorset_bridport_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.4465442004504505
+    },
+    {
+      "brier_score": 0.26936296217815264,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "dorset_st-leonards-st-ives_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6236468755125472
+    },
+    {
+      "brier_score": 1.2009127008208087,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "ealing_north-acton_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.08111953752402522
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "essex_chelmsford-springfield",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.25261513587765944,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "flintshire_argoed-and-new-brighton_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5652945584581203
+    },
+    {
+      "brier_score": 0.1507155337953711,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "fylde_kirkham_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7026099215991931
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "gateshead_high-fell_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.3223198207582013,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "gloucestershire_cirencester-park_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5056090360672572
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "gwynedd_llanrug_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.41355378338161614,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "hackney_dalston_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5175761217089029
+    },
+    {
+      "brier_score": 1.1230221676663459,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "hackney_hackney-central_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.20548446069469836
+    },
+    {
+      "brier_score": 0.14558630042788565,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "halton_farnworth_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7165433100138565
+    },
+    {
+      "brier_score": 1.1772800760937265,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "harborough_lutterworth-east_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.05677771334063622
+    },
+    {
+      "brier_score": 0.0849708325888453,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "haringey_northumberland-park_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7475296053808451
+    },
+    {
+      "brier_score": 1.304881528762702,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "haringey_woodside_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.08834383712744787
+    },
+    {
+      "brier_score": 0.6397287726252869,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "hertsmere_bushey-park_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.3903029778143449
+    },
+    {
+      "brier_score": 1.008221582591767,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "kent_cliftonville_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.12299639202697109
+    },
+    {
+      "brier_score": 1.2153897715412527,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "lambeth_streatham-st-leonards_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.068058603387477
+    },
+    {
+      "brier_score": 0.23702351653196496,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "lancaster_castle_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6370382547025808
+    },
+    {
+      "brier_score": 0.4407626126435743,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "leicestershire_narborough-whetstone_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.4153243297955407
+    },
+    {
+      "brier_score": 0.8040558842242356,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "lewisham_crofton-park_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.28383102437646396
+    },
+    {
+      "brier_score": 1.0441852895563661,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "liverpool_aigburth_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.15592748020134597
+    },
+    {
+      "brier_score": 1.6426572163825217,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "luton_wigmore_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009433962264150945
+    },
+    {
+      "brier_score": 0.6083485251065212,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "malvern-hills_alfrick-leigh-rushwick_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.38202003869142154
+    },
+    {
+      "brier_score": 1.5508254853606065,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "malvern-hills_tenbury_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.014372721486025114
+    },
+    {
+      "brier_score": 0.8782889711978032,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "merthyr-tydfil_dowlais-and-pant_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.3048886948930598
+    },
+    {
+      "brier_score": 0.20174971704580658,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "neath-port-talbot_trebanos_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6643658199158154
+    },
+    {
+      "brier_score": 0.5733360284137036,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "new-forest_bransgore-burley-sopley-ringwood-east_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.40540047004717383
+    },
+    {
+      "brier_score": 0.7854180857075627,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "north-devon_fremington_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.2495453120100345
+    },
+    {
+      "brier_score": 0.18865515232218863,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "north-lincolnshire_axholme-central_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6791405749909549
+    },
+    {
+      "brier_score": 1.5359110285153015,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "north-lincolnshire_brumby_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009523809523809525
+    },
+    {
+      "brier_score": 0.2432701228900519,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "north-norfolk_suffield-park_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5915343915343916
+    },
+    {
+      "brier_score": 0.79807046393051,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "northumberland_cramlington-south-west_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.2634284059649631
+    },
+    {
+      "brier_score": 1.5019139875235628,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "nuneaton-and-bedworth_camp-hill_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.010342403855808816
+    },
+    {
+      "brier_score": 1.1131508373974004,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "peterborough_fletton-woodston_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.11862342611326092
+    },
+    {
+      "brier_score": 1.4556264765044293,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "powys_llanyre-with-nantmel_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009523809523809523
+    },
+    {
+      "brier_score": 0.6911260383206749,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "powys_yscir-with-honddu-isaf-and-llanddew_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.3937403651996439
+    },
+    {
+      "brier_score": 0.6772034252864942,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "redcar-and-cleveland_zetland_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.3415546283418328
+    },
+    {
+      "brier_score": 0.587196472146892,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "rhondda-cynon-taf_treorchy_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.4307935105107001
+    },
+    {
+      "brier_score": 0.3154255171990778,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "rochford_sweyne-park-grange_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5724505804832131
+    },
+    {
+      "brier_score": 0.8095224178875184,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "rossendale_hareholme-waterfoot_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.27090523242973336
+    },
+    {
+      "brier_score": 0.3338909855517422,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "rushmoor_wellington_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5770391828022565
+    },
+    {
+      "brier_score": 1.3889083477110147,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "salford_barton-winton_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009433962264150943
+    },
+    {
+      "brier_score": 0.23596440692570703,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "sevenoaks_halstead-knockholt-and-badgers-mount_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6471685140428369
+    },
+    {
+      "brier_score": 1.2867628000122828,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "sevenoaks_hextable_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.18381574852163088
+    },
+    {
+      "brier_score": 1.4220343212865016,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "slough_cippenham-green_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.01062784011870537
+    },
+    {
+      "brier_score": 1.4446108681448704,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "st-helens_haydock_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009433962264150943
+    },
+    {
+      "brier_score": 0.28328474571849016,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "stafford_manor_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5829681330682422
+    },
+    {
+      "brier_score": 0.49602474895452253,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "staffordshire_stretton_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.41210875436924055
+    },
+    {
+      "brier_score": 0.759299846634778,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "stratford-on-avon_kinwarton_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.32844371465061123
+    },
+    {
+      "brier_score": 0.20987680668757347,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "stroud_thrupp_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6169964407363466
+    },
+    {
+      "brier_score": 0.43044164859895623,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "surrey_haslemere_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5259967004382547
+    },
+    {
+      "brier_score": 1.14053622991863,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "swansea_fairwood_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.11880450967879176
+    },
+    {
+      "brier_score": 0.04029110133550912,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "swansea_morriston_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.8302559052073074
+    },
+    {
+      "brier_score": 1.452089185356726,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "tamworth_spital_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.012176792609609464
+    },
+    {
+      "brier_score": 1.128628501435742,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "tamworth_wilnecote",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.13521875755378293
+    },
+    {
+      "brier_score": 0.14759132085212012,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "teignbridge_dawlish-south-west_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7136435748281332
+    },
+    {
+      "brier_score": 0.09801826725076213,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "telford-and-wrekin_malinslee-dawley-bank_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7513165842271088
+    },
+    {
+      "brier_score": 0.5308769707327008,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "the-vale-of-glamorgan_baruc_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.3669712436919891
+    },
+    {
+      "brier_score": 1.421168012911711,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "torfaen_llantarnam_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.01991922158986598
+    },
+    {
+      "brier_score": 0.8764139258480905,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "uttlesford_stort-valley_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.3054183066744829
+    },
+    {
+      "brier_score": 0.5918363186364155,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "vale-of-white-horse_abingdon-abbey-northcourt_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.33621433726599204
+    },
+    {
+      "brier_score": 0.5349215306659524,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "vale-of-white-horse_stanford_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.42286485444380184
+    },
+    {
+      "brier_score": 0.13986895067624575,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "waverley_haslemere-west_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7255639097744361
+    },
+    {
+      "brier_score": 1.3967613115031878,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "westmorland-and-furness_hawcoat-and-newbarns_by",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.011553926206244089
+    },
+    {
+      "brier_score": 0.2813408215769696,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "westmorland-and-furness_penrith-south_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5866637016328864
+    },
+    {
+      "brier_score": 0.12705191509815789,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "wrexham_queensway_by",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7218945487042002
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "braintree_coggeshall_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.6666666666666667,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "breckland_dereham-toftwood_by",
+      "top_choice_accuracy": 0.3333333333333333,
+      "winner_probability": 0.3333333333333333
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "brighton-and-hove_goldsmid_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "bury_moorside",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "bury_tottington_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "caerphilly_van_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cambridgeshire_ramsey-bury_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cambridgeshire_roman-bank-peckover_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "camden_regents-park_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cardiff_splott_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cherwell_kidlington-west_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cheshire-west-and-chester_christleton-huntington_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cheshire-west-and-chester_weaver-cuddington_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "conwy_gogarth-mostyn_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "conwy_tudno_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cornwall_newquay-porth-tretherras_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cotswold_st-michaels_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cotswold_the-beeches_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "county-durham_murton_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "dacorum_apsley-and-corner-hall_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "denbighshire_llanrhaeadr-yng-nghinmeirch_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "denbighshire_rhyl-south_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "dorset_bridport_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "dorset_st-leonards-st-ives_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "ealing_north-acton_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "essex_chelmsford-springfield",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "flintshire_argoed-and-new-brighton_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "fylde_kirkham_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "gateshead_high-fell_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "gloucestershire_cirencester-park_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "gwynedd_llanrug_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "hackney_dalston_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "hackney_hackney-central_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "halton_farnworth_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "harborough_lutterworth-east_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "haringey_northumberland-park_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "haringey_woodside_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "hertsmere_bushey-park_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "kent_cliftonville_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "lambeth_streatham-st-leonards_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "lancaster_castle_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "leicestershire_narborough-whetstone_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "lewisham_crofton-park_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "liverpool_aigburth_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "luton_wigmore_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "malvern-hills_alfrick-leigh-rushwick_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "malvern-hills_tenbury_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "merthyr-tydfil_dowlais-and-pant_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "neath-port-talbot_trebanos_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "new-forest_bransgore-burley-sopley-ringwood-east_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "north-devon_fremington_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "north-lincolnshire_axholme-central_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "north-lincolnshire_brumby_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "north-norfolk_suffield-park_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "northumberland_cramlington-south-west_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.6666666666666667,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "nuneaton-and-bedworth_camp-hill_by",
+      "top_choice_accuracy": 0.3333333333333333,
+      "winner_probability": 0.3333333333333333
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "peterborough_fletton-woodston_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "powys_llanyre-with-nantmel_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "powys_yscir-with-honddu-isaf-and-llanddew_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "redcar-and-cleveland_zetland_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "rhondda-cynon-taf_treorchy_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "rochford_sweyne-park-grange_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "rossendale_hareholme-waterfoot_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "rushmoor_wellington_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "salford_barton-winton_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "sevenoaks_halstead-knockholt-and-badgers-mount_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "sevenoaks_hextable_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "slough_cippenham-green_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "st-helens_haydock_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "stafford_manor_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "staffordshire_stretton_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "stratford-on-avon_kinwarton_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "stroud_thrupp_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "surrey_haslemere_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "swansea_fairwood_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "swansea_morriston_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "tamworth_spital_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "tamworth_wilnecote",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "teignbridge_dawlish-south-west_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "telford-and-wrekin_malinslee-dawley-bank_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "the-vale-of-glamorgan_baruc_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "torfaen_llantarnam_by",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.6666666666666667,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "uttlesford_stort-valley_by",
+      "top_choice_accuracy": 0.3333333333333333,
+      "winner_probability": 0.3333333333333333
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "vale-of-white-horse_abingdon-abbey-northcourt_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "vale-of-white-horse_stanford_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "waverley_haslemere-west_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "westmorland-and-furness_hawcoat-and-newbarns_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.75,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "westmorland-and-furness_penrith-south_by",
+      "top_choice_accuracy": 0.25,
+      "winner_probability": 0.25
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "wrexham_queensway_by",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    }
+  ],
+  "errors": [],
+  "groups": [
+    {
+      "mean_brier_score": 0.7310388357815133,
+      "mean_top_choice_accuracy": 0.44419475655430707,
+      "mean_winner_probability": 0.350008498678988,
+      "model": "baseline/last-ward-party-share",
+      "n": 89,
+      "output_format": "winner_only"
+    },
+    {
+      "mean_brier_score": 0.7977528089887642,
+      "mean_top_choice_accuracy": 0.20224719101123595,
+      "mean_winner_probability": 0.20224719101123595,
+      "model": "baseline/uniform",
+      "n": 89,
+      "output_format": "winner_only"
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "additional_cost_total_usd": 258.775587,
+  "additional_costs_usd": {
+    "prior_cumulative": 258.775587
+  },
+  "benchmark_id": "votecastbench.uk_local",
+  "benchmark_version": "1.0.0",
+  "budget_reference_usd": 1000.0,
+  "completed_observations": 1068,
+  "cost_is_estimate": true,
+  "cumulative_estimated_cost_usd": 300.527784,
+  "error_observations": [],
+  "expected_observations": 1068,
+  "generated_at": "2026-07-23T17:38:55.644169+00:00",
+  "missing_observations": [],
+  "model_count": 12,
+  "models": {
+    "anthropic/claude-haiku-4-5": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 1.348755,
+      "inference_config": {
+        "adapter_version": "anthropic-messages-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "anthropic",
+        "reasoning_effort": null,
+        "requested_model": "claude-haiku-4-5-20251001",
+        "structured_output": false,
+        "thinking_budget_tokens": 4096,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "413f5e118cb2f7fe90cf2f244c331de52774bafc26e4879989ac6dc6f2cdd1c7",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 273135,
+        "output_tokens": 215124
+      }
+    },
+    "anthropic/claude-sonnet-4-5-thinking-10k": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 3.723405,
+      "inference_config": {
+        "adapter_version": "anthropic-messages-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "anthropic",
+        "reasoning_effort": null,
+        "requested_model": "claude-sonnet-4-5-20250929",
+        "structured_output": false,
+        "thinking_budget_tokens": 10000,
+        "thinking_mode": "manual"
+      },
+      "inference_config_sha256": "5797e57ef49eb02ba354112b3ed3328f373f841cabdc8c0ef15e0344046160d7",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 273135,
+        "output_tokens": 193600
+      }
+    },
+    "anthropic/claude-sonnet-4-6-max": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 5.811396,
+      "inference_config": {
+        "adapter_version": "anthropic-messages-structured-portable-v2",
+        "anthropic_effort": "max",
+        "anthropic_schema_mode": "portable",
+        "max_output_tokens": 12000,
+        "provider": "anthropic",
+        "reasoning_effort": null,
+        "requested_model": "claude-sonnet-4-6",
+        "structured_output": true,
+        "thinking_budget_tokens": null,
+        "thinking_mode": "adaptive"
+      },
+      "inference_config_sha256": "b1d693cf6b184a6ea62ca309b3eb6a74ef3ab972fe5f77ab1c9a4b891c937238",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 293872,
+        "output_tokens": 328652
+      }
+    },
+    "anthropic/claude-sonnet-5-xhigh": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 4.330946,
+      "inference_config": {
+        "adapter_version": "anthropic-messages-structured-portable-v2",
+        "anthropic_effort": "xhigh",
+        "anthropic_schema_mode": "portable",
+        "max_output_tokens": 32000,
+        "provider": "anthropic",
+        "reasoning_effort": null,
+        "requested_model": "claude-sonnet-5",
+        "structured_output": true,
+        "thinking_budget_tokens": null,
+        "thinking_mode": "adaptive"
+      },
+      "inference_config_sha256": "b2139829747ef9d77437a8fbce63ae67b2cc486983b66d87af61f311bebb8dd5",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 364928,
+        "output_tokens": 360109
+      }
+    },
+    "openai/gpt-5.2": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 1.799555,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.2-2025-12-11",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "7723499137332324a1f8c8ccf9039b62613cb7fedeb645a4bc8137887926d98f",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 228965,
+        "output_tokens": 99919
+      }
+    },
+    "openai/gpt-5.4": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 6.049258,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.4-2026-03-05",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "48a6d039a15a57bb2599580ec0dca85558bbb398180f74b48beab5f1c978a24c",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 228965,
+        "output_tokens": 365123
+      }
+    },
+    "openai/gpt-5.4-mini": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 2.237755,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.4-mini",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "a471879d67ab9493b27ba56b513c0b2a1d0d8d170f5905b96928a9b181a668e5",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 228965,
+        "output_tokens": 459118
+      }
+    },
+    "openai/gpt-5.4-nano": {
+      "attempt_count": 90,
+      "estimated_cost_usd": 0.220625,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.4-nano",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "425a6b54f8cec979e7f6f26aa431167c49d90d5bf089764f89cb2490644a9dc8",
+      "observations_with_retries": 1,
+      "usage": {
+        "input_tokens": 231713,
+        "output_tokens": 139426
+      }
+    },
+    "openai/gpt-5.5": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 9.729505,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.5-2026-04-23",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "bd3a92b203743818fc57f3e5465a89ec09dce94ed3b44a40a8e4dde9b351f6df",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 228965,
+        "output_tokens": 286156
+      }
+    },
+    "openai/gpt-5.6-luna": {
+      "attempt_count": 90,
+      "estimated_cost_usd": 0.803195,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.6-luna",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "eb94be2d1bd33be2cf1c153b833b497840b9af32e1ff6eb9f28c2f353a1e815f",
+      "observations_with_retries": 1,
+      "usage": {
+        "input_tokens": 231527,
+        "output_tokens": 95278
+      }
+    },
+    "openai/gpt-5.6-sol": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 4.296805,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.6-sol",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "ba6a047cd0a6e396e49f51affbe72c819b88d112cba8ed0081d10fbcb2216481",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 228965,
+        "output_tokens": 105066
+      }
+    },
+    "openai/gpt-5.6-terra": {
+      "attempt_count": 89,
+      "estimated_cost_usd": 1.400998,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.6-terra",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "e0ae303beb5e17c2c42977439eecc20e18350b43f75abd4e11809e3700aa1b00",
+      "observations_with_retries": 0,
+      "usage": {
+        "input_tokens": 228965,
+        "output_tokens": 55239
+      }
+    }
+  },
+  "output_format": "winner_only",
+  "panel_attempt_count": 1070,
+  "panel_estimated_cost_usd": 41.752197,
+  "panel_observations_with_retries": 2,
+  "question_count": 89,
+  "question_sha256": {
+    "braintree_coggeshall_by": "33e2a73580dd93b358de084c6436dc88e1f95c1e9e842f73ccfecbda56ba83f8",
+    "breckland_dereham-toftwood_by": "6cb6afc58d55e8961cc3e00ce8aa4dc5110e4d6bdb4e5697bfd67d47c5690336",
+    "brighton-and-hove_goldsmid_by": "e004148a080aef2845841678791cd097946647342ae171587e37246b91982573",
+    "bury_moorside": "1c832bcc6bd8dda20c1eb37b1d0a181f41386cfea376b49266157c9bc7e77704",
+    "bury_tottington_by": "95b2575113a8faf355b966eb437e408e701c085b08e72458c165b74f3b4907f9",
+    "caerphilly_van_by": "3124335084fdc8d10da19ce96eaa83deed09b26c738dcd5115347934f509b062",
+    "cambridgeshire_ramsey-bury_by": "ba958706602e12ed28b5c40fdd7def6d66ccde5ccc19ccb18a812953ac6e5ccf",
+    "cambridgeshire_roman-bank-peckover_by": "126be855fa7b7fa6a0005d01d770302964809a44e2dcdda77f0a5e9125e32791",
+    "camden_regents-park_by": "438de5f6eef92325f230a4df2086e29b3b078d37b7d67d23889fb00dbc65107e",
+    "cardiff_splott_by": "66427d849e4d16fa00d36358fe44144d6084afe0ce1676f91f031ba7dc7d2a10",
+    "cherwell_kidlington-west_by": "bc4be34c4a2fe36269fb202d60521aafd1e8386cc1d7a2e6cb7126ebb4e96356",
+    "cheshire-west-and-chester_christleton-huntington_by": "0533592331fdc27d9af851f17f3bf9b2340b3e39fa4b30149ce82cd5690c948d",
+    "cheshire-west-and-chester_weaver-cuddington_by": "d3ac0e2af4fdbc1a6ca47e9e4df9687a049501e7e90e60a1c15270bd14f29291",
+    "conwy_gogarth-mostyn_by": "7418a6c050dc2273d31c1b15ce69c929467875e3f813466f6e81783782ba5ae3",
+    "conwy_tudno_by": "2c7cc6b08bd47bfd18f8e47760d8253d9c3cae64a5315f3da05524fdb70269a9",
+    "cornwall_newquay-porth-tretherras_by": "c0f5db120d03cdcaec856ffd0b0d2509d06a031ee071ad5ef68dafdf2bb04e43",
+    "cotswold_st-michaels_by": "307582775e177e3419a3100c41cabeb380bfa07f32e682e2968b6a73e1a0145f",
+    "cotswold_the-beeches_by": "b27f2270cfc257043b5e835bfc13f82a1fdfe2ebed8a8bc6af1ee1adda58c654",
+    "county-durham_murton_by": "e31ba922578e193a0aad79a8aa16540f8b3b636ac3167fa1fbb51ad9932d546a",
+    "dacorum_apsley-and-corner-hall_by": "68ad8eba356ed6649021ea163618a1e6aa9f80e29eff6c6aef932f022c958ccd",
+    "denbighshire_llanrhaeadr-yng-nghinmeirch_by": "1063863cc76e3492ba65e8b4687d21538539d6ce56afb6f27ceae299630338e6",
+    "denbighshire_rhyl-south_by": "4a4e14ae083c6153f76117e2af872cff0d9da949a3e96ceb6b42972520332635",
+    "dorset_bridport_by": "ef2a663cb4df330c44d40b74962910f71811099ba43ebfa02f9ca80a23aed55c",
+    "dorset_st-leonards-st-ives_by": "806430d82af74122a8bf14e5785d87a4da7c833fdee9a22d8af6ac4645645732",
+    "ealing_north-acton_by": "a34bc18ecfde508adf8c33f94ea7aab3998ae37c7fb92eca0c97f58e843eb98b",
+    "essex_chelmsford-springfield": "e0ddc6a55c3eb0f5e7f74c98aa5c4bbd149ee15f695597e4390a4395af045fba",
+    "flintshire_argoed-and-new-brighton_by": "4517a7cbde11b22f53e2d3e18328e2e471d68b9e95cb0140f0d2d4dd300efa11",
+    "fylde_kirkham_by": "d9be042d4ebbaa41cab25bfcc74c785242adbefe1404d5e27a28b02f61acca71",
+    "gateshead_high-fell_by": "edb27591d69933dd7dfb9a5225afb4275275ffaf3cdcab53cd65f7496061c6c7",
+    "gloucestershire_cirencester-park_by": "7e50e79e196f02345815dca075e03f063bce817371ba4873083c58ae9703b868",
+    "gwynedd_llanrug_by": "6bf8fd1e30055581f560b4707a9a1b15567fb25b7abf7a87715c9124fbc40055",
+    "hackney_dalston_by": "02deea6f7d3781edbfbccd33b8a0ef1c5e701a7f1763c1e41445acd3dbb0b514",
+    "hackney_hackney-central_by": "c4f0f862fd40c1f7464a377eafbf59abc2a64987baedaf6d65ac84f42bcd3dd4",
+    "halton_farnworth_by": "a83676c7f557fad90f5ae60ce10830fa670bc069cb4d1cb48e928125f7c775fc",
+    "harborough_lutterworth-east_by": "53435f9a1202c680ab57d65112ba3f95c021552b656cd433b4c62a7b773ffbee",
+    "haringey_northumberland-park_by": "3aeae7b958c0b90ee05b8435de7fc09638e9205ac10192e555ca595edf271007",
+    "haringey_woodside_by": "bef829b5f807e71cc0667f85d60048f27bc4b94260a863490b10eedcad5ae876",
+    "hertsmere_bushey-park_by": "298718f779bbe17bef27c54542ee2635a2b5da51dd2fb611d8c0821806faeb5e",
+    "kent_cliftonville_by": "f7380e57b8105281891f1cdcae720f2ba51c163937ad533fef66459f6202a077",
+    "lambeth_streatham-st-leonards_by": "e900da38d4514e5a66b4a8f897015858c46a7591ce9043f3fa00fd26eea76074",
+    "lancaster_castle_by": "c2f1b7360489ab4fc2c641af904469173be484c2adde307b1233b3d7002a9665",
+    "leicestershire_narborough-whetstone_by": "2c0d8cf275bb20500e237676ba61355dfa8592a80084b4d5d10f78ce1e0ede4f",
+    "lewisham_crofton-park_by": "ef3507d2813da4c6c63aa9e89bfa3beb730bdd539972969e81291baa38cbe224",
+    "liverpool_aigburth_by": "c3ce0658c05cb95398f75e96ed6438971529d89ed2df523ad31777c8340da8cf",
+    "luton_wigmore_by": "fb29fde5e4d0ab5321aab09d9c3893626044bd4d395303dd7f6de71839d6cef9",
+    "malvern-hills_alfrick-leigh-rushwick_by": "0c64739ce04dfadc5f0094ab89b9e3ef498b4da94edbd9537fab97eac0db56d1",
+    "malvern-hills_tenbury_by": "f49ecfc999b6b43665314aacddb1c934ef62b63fbe91f7aaac68449207f1c8af",
+    "merthyr-tydfil_dowlais-and-pant_by": "355691e7a0d911d723a9853c96468f6e60a2ca2fb04458c569c8007e7e809dd0",
+    "neath-port-talbot_trebanos_by": "9dea67c05de6ea923aa050872273e0b1011ebf2ad3c1c33d9ff8c25a802e18aa",
+    "new-forest_bransgore-burley-sopley-ringwood-east_by": "8eab3ead4993e2a5f4d61670b5b29a8894f9afc4728e8bef079f9b0a02bf34d4",
+    "north-devon_fremington_by": "0c0b9e21379f75e8b701e4e873c8f0f7b107c3d810b6a090c4aabc03633aa78d",
+    "north-lincolnshire_axholme-central_by": "15c2cabb90c6e863cb4f2a6f76c3770183863225c4936c711c9cc129c30edd91",
+    "north-lincolnshire_brumby_by": "9498be8d5fbbf3fadf1196789a393cbe9cfb423654d782e5662331b0fbcbcec1",
+    "north-norfolk_suffield-park_by": "d5cac168e3952f9612491f18e75df83dbd1a7e8d3cdd81892dd96f4d919f9535",
+    "northumberland_cramlington-south-west_by": "94882e31519ed5450b7244dbf9615c21c125443cc3e56b006431b66166e61051",
+    "nuneaton-and-bedworth_camp-hill_by": "f1f49f07fc280ae481576b94a146032f21652eb412e9fe1e7a7f060b0f451a20",
+    "peterborough_fletton-woodston_by": "0e73d7537f4f97c5abf0cef00b7b86b71d3606281e2b23b0596e9befcddcba10",
+    "powys_llanyre-with-nantmel_by": "5339276f57a848364fbeacdf56fa1571f0348ecfb16d644251964172f6d7dbc0",
+    "powys_yscir-with-honddu-isaf-and-llanddew_by": "59df91eb09e104f5801f5808a22f4124bab6f9ddef2ad124ca005e26cd7f6dd3",
+    "redcar-and-cleveland_zetland_by": "a46303f5852b5bae3e42fdcc2254ab986967aa12de4fbb758633e95939730142",
+    "rhondda-cynon-taf_treorchy_by": "766a9248e8e5ed911380c85b5c422d297abdba5d5152c9d436d8a9b9e8f91b37",
+    "rochford_sweyne-park-grange_by": "752a284bea7a116bfdbb2276eac4612bfcc0fc75b0d232987eb6ebb7cde762f1",
+    "rossendale_hareholme-waterfoot_by": "e08b07df4e381c4deeeb6873ca4dbb713d73c1fdc43f9129b7fcf3bc61781e2b",
+    "rushmoor_wellington_by": "9fc16a2a4ce95d564ebe6971bd11b84ef1870666774ca6d5efa57af37aada8eb",
+    "salford_barton-winton_by": "f2ca85ad5e03efc8f21533b0283aa9b4ca5c0828ead9aadfe88a79bb566717c6",
+    "sevenoaks_halstead-knockholt-and-badgers-mount_by": "ecccfe5062188c535652c913f03c55824918e6b0cbcc9aee138d5b49980ff912",
+    "sevenoaks_hextable_by": "875e91fe76ddad8af3e00e7289441886e9212053fd415a9215d69da9ae58ccb2",
+    "slough_cippenham-green_by": "69a987e83719c0540f03ee3f18d47548951807578263625620e7219dde18a1e8",
+    "st-helens_haydock_by": "a0bc923d12d005febe7240b3fe06b9b06557c4da075aa554c7f3045822b53403",
+    "stafford_manor_by": "a5addf2aeefaff377b12cf39d570a26fd5c177914135223b548b91e570f54640",
+    "staffordshire_stretton_by": "f0dad26d7d831869372bc8e425bdde3a993ef213e76137d0c40c5fddf20300bb",
+    "stratford-on-avon_kinwarton_by": "3e6d5352ac5be71167db85433fbc7354ac4ace041ecf1725d5342e0e05d7a3c9",
+    "stroud_thrupp_by": "8b88b12d10d853c8e6c36e3910b3ed7bfeeed1ed07e074f67b7084ab046f8e8b",
+    "surrey_haslemere_by": "b619a52aa6c673eea26daa79682efae932b766e0ba427bf10b60634f4ece8e58",
+    "swansea_fairwood_by": "2f500079bdbd713a0ce4338320c1606b3af923c667ec5a9e1a7b17cdd689f713",
+    "swansea_morriston_by": "f6dc393c2949ca007a16ff7caff549ecea5836d2a61f1649c1ff8fbe136a554e",
+    "tamworth_spital_by": "61e16da388026a41320fd663b3c4fdfd3b414a04e8be1a9d4de14d8e9664612b",
+    "tamworth_wilnecote": "40e33d2b710e0b62cf05f806a6b6c038c8dc71eca1f925316cbed7dc174836fd",
+    "teignbridge_dawlish-south-west_by": "6466d2e523344fcb9cf917f9ea80890545a972723f954e347334bf0e4393274d",
+    "telford-and-wrekin_malinslee-dawley-bank_by": "db72b05d966a76acacb2a58929588861a84881db724a6be28fde320bc08ace22",
+    "the-vale-of-glamorgan_baruc_by": "5f7d646d01361fdd834d5ab293360356069151cadd22b4b2218250be4f5d01c0",
+    "torfaen_llantarnam_by": "894386f629d04c2f080f8777bffb32170886068cd4c32ff8abb730a0900a0f55",
+    "uttlesford_stort-valley_by": "8c4c4fa6dd6ab587a5e16ffa6af989f00106867590b9c0354b6ae44cc20d2a40",
+    "vale-of-white-horse_abingdon-abbey-northcourt_by": "2c225e47eb1c90a3fcb9f9ba2a2bb020bce803ddd9e348aeea15a6f5a02a9c39",
+    "vale-of-white-horse_stanford_by": "78d5d6985b174d783eb997a131aca305ca901da681b0260525f06ac2a0a61bd3",
+    "waverley_haslemere-west_by": "5385941a2e2028f1ba09f2fb79d6c289ad2cef51195f40b1e042ea4f4c7dc6b5",
+    "westmorland-and-furness_hawcoat-and-newbarns_by": "27e2f66eb85ee8317aedaf74494db7328de9999c705681912a6c58cffc7d333d",
+    "westmorland-and-furness_penrith-south_by": "4350f563ad6b6f5ab0e5cd9b0a07b952ef4bf347316ca2a8a24b267837726fc1",
+    "wrexham_queensway_by": "cab09a2c50a97868c4da68c4749c557580002ec6d1b5dd9f04540ef0c161853a"
+  },
+  "within_budget_reference": true
+}
