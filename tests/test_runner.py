@@ -137,6 +137,7 @@ def test_resume_merge_preserves_usage_from_prior_failed_run() -> None:
     current = {
         "observation_id": "observation",
         "status": "ok",
+        "forecast": {"winner": "a"},
         "usage": {"input_tokens": 12, "output_tokens": 3},
         "attempt_log": [{"attempt": 1, "status": "ok"}],
     }
@@ -147,3 +148,8 @@ def test_resume_merge_preserves_usage_from_prior_failed_run() -> None:
     assert merged["usage"] == {"input_tokens": 22, "output_tokens": 5}
     assert merged["attempts"] == 2
     assert merged["errors"] == ["first run failed"]
+
+    reverse = merge_observation_records(current, prior)
+    assert reverse["status"] == "ok"
+    assert reverse["usage"] == merged["usage"]
+    assert reverse["forecast"] == merged["forecast"]

@@ -62,10 +62,23 @@ def merge_observation_records(
     prior_log = list(prior.get("attempt_log", []))
     current_log = list(current.get("attempt_log", []))
     if prior_log and current_log:
+        cumulative = None
         if len(prior_log) <= len(current_log) and current_log[: len(prior_log)] == prior_log:
-            return dict(current)
-        if len(current_log) <= len(prior_log) and prior_log[: len(current_log)] == current_log:
-            return dict(prior)
+            cumulative = current
+        elif len(current_log) <= len(prior_log) and prior_log[: len(current_log)] == current_log:
+            cumulative = prior
+        if cumulative is not None:
+            successful = next(
+                (row for row in (current, prior) if row.get("status") == "ok"),
+                cumulative,
+            )
+            merged = {**cumulative, **successful}
+            merged["usage"] = dict(cumulative.get("usage", {}))
+            merged["attempt_log"] = list(cumulative.get("attempt_log", []))
+            merged["attempts"] = len(merged["attempt_log"]) or int(
+                cumulative.get("attempts", 0)
+            )
+            return merged
     if prior.get("status") == "ok" and current.get("status") == "ok":
         prior_response = prior.get("provider_response_id")
         current_response = current.get("provider_response_id")
@@ -79,16 +92,19 @@ def merge_observation_records(
     _add_usage(usage, prior.get("usage", {}))
     _add_usage(usage, current.get("usage", {}))
     attempt_log = [*prior_log, *current_log]
-    merged = {
-        **prior,
-        **current,
-        "usage": usage,
-        "attempt_log": attempt_log,
-        "attempts": len(attempt_log)
-        or (int(prior.get("attempts", 0)) + int(current.get("attempts", 0))),
-    }
+    merged = {**prior, **current}
     prior_errors = list(prior.get("errors", []))
     current_errors = list(current.get("errors", []))
+    payload = prior if prior.get("status") == "ok" else current
+    merged.update(payload)
+    merged.update(
+        {
+            "usage": usage,
+            "attempt_log": attempt_log,
+            "attempts": len(attempt_log)
+            or (int(prior.get("attempts", 0)) + int(current.get("attempts", 0))),
+        }
+    )
     if prior_errors or current_errors:
         merged["errors"] = [*prior_errors, *current_errors]
     return merged
