@@ -8,8 +8,9 @@ import json
 from pathlib import Path
 from typing import Any
 
+from votecastbench.baselines import baseline_predictions
 from votecastbench.env import load_env_file
-from votecastbench.io import read_json, read_jsonl, write_json
+from votecastbench.io import read_json, read_jsonl, write_json, write_jsonl
 from votecastbench.runner import run_benchmark
 from votecastbench.schemas import OutputFormat
 from votecastbench.scoring import score_runs
@@ -23,6 +24,10 @@ def _parser() -> argparse.ArgumentParser:
     validate = subparsers.add_parser("validate")
     validate.add_argument("--questions", type=Path, default=Path("data/questions.jsonl"))
     validate.add_argument("--labels", type=Path, default=Path("data/labels.jsonl"))
+
+    baseline = subparsers.add_parser("baseline")
+    baseline.add_argument("--questions", type=Path, default=Path("data/questions.jsonl"))
+    baseline.add_argument("--output", type=Path, required=True)
 
     run = subparsers.add_parser("run")
     run.add_argument("--questions", type=Path, default=Path("data/questions.jsonl"))
@@ -66,6 +71,9 @@ def main() -> None:
             read_jsonl(args.labels),
         )
         print(json.dumps(summary, indent=2, sort_keys=True))
+        return
+    if args.command == "baseline":
+        write_jsonl(args.output, baseline_predictions(read_jsonl(args.questions)))
         return
     if args.command == "run":
         if args.env_file:
