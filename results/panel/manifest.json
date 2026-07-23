@@ -1,0 +1,274 @@
+{
+  "additional_cost_total_usd": 1.257796,
+  "additional_costs_usd": {
+    "historical_non_panel_calls": 0.473676,
+    "sonnet5_failed_max_probe_upper_bound": 0.78412
+  },
+  "benchmark_id": "votecastbench.uk_local",
+  "benchmark_version": "1.0.0",
+  "budget_reference_usd": 50.0,
+  "completed_observations": 240,
+  "cost_is_estimate": true,
+  "cumulative_estimated_cost_usd": 12.99374,
+  "error_observations": [],
+  "expected_observations": 240,
+  "generated_at": "2026-07-23T08:54:15.633038+00:00",
+  "missing_observations": [],
+  "model_count": 12,
+  "models": {
+    "anthropic/claude-haiku-4-5": {
+      "estimated_cost_usd": 0.375711,
+      "inference_config": {
+        "adapter_version": "anthropic-messages-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "anthropic",
+        "reasoning_effort": null,
+        "requested_model": "claude-haiku-4-5-20251001",
+        "structured_output": false,
+        "thinking_budget_tokens": 4096,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "413f5e118cb2f7fe90cf2f244c331de52774bafc26e4879989ac6dc6f2cdd1c7",
+      "usage": {
+        "input_tokens": 87321,
+        "output_tokens": 57678
+      }
+    },
+    "anthropic/claude-sonnet-4-5-thinking-10k": {
+      "estimated_cost_usd": 1.032963,
+      "inference_config": {
+        "adapter_version": "anthropic-messages-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "anthropic",
+        "reasoning_effort": null,
+        "requested_model": "claude-sonnet-4-5-20250929",
+        "structured_output": false,
+        "thinking_budget_tokens": 10000,
+        "thinking_mode": "manual"
+      },
+      "inference_config_sha256": "5797e57ef49eb02ba354112b3ed3328f373f841cabdc8c0ef15e0344046160d7",
+      "usage": {
+        "input_tokens": 87321,
+        "output_tokens": 51400
+      }
+    },
+    "anthropic/claude-sonnet-4-6-max": {
+      "estimated_cost_usd": 1.603749,
+      "inference_config": {
+        "adapter_version": "anthropic-messages-structured-v1",
+        "anthropic_effort": "max",
+        "max_output_tokens": 12000,
+        "provider": "anthropic",
+        "reasoning_effort": null,
+        "requested_model": "claude-sonnet-4-6",
+        "structured_output": true,
+        "thinking_budget_tokens": null,
+        "thinking_mode": "adaptive"
+      },
+      "inference_config_sha256": "c5072b60f3d2e8b0ff742c9d14fca65286217f514cb68a6c888002a90e95d178",
+      "usage": {
+        "input_tokens": 92808,
+        "output_tokens": 88355
+      }
+    },
+    "anthropic/claude-sonnet-5-xhigh": {
+      "estimated_cost_usd": 1.210334,
+      "inference_config": {
+        "adapter_version": "anthropic-messages-structured-v1",
+        "anthropic_effort": "xhigh",
+        "max_output_tokens": 32000,
+        "provider": "anthropic",
+        "reasoning_effort": null,
+        "requested_model": "claude-sonnet-5",
+        "structured_output": true,
+        "thinking_budget_tokens": null,
+        "thinking_mode": "adaptive"
+      },
+      "inference_config_sha256": "fa81a00c3e9eda5a5ec8842ee9b81cbb8bd0180041fb966824b39e0604e6a611",
+      "usage": {
+        "input_tokens": 114452,
+        "output_tokens": 98143
+      }
+    },
+    "openai/gpt-5.2": {
+      "estimated_cost_usd": 0.506693,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.2-2025-12-11",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "7723499137332324a1f8c8ccf9039b62613cb7fedeb645a4bc8137887926d98f",
+      "usage": {
+        "input_tokens": 74795,
+        "output_tokens": 26843
+      }
+    },
+    "openai/gpt-5.4": {
+      "estimated_cost_usd": 1.745517,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.4-2026-03-05",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "48a6d039a15a57bb2599580ec0dca85558bbb398180f74b48beab5f1c978a24c",
+      "usage": {
+        "input_tokens": 74795,
+        "output_tokens": 103902
+      }
+    },
+    "openai/gpt-5.4-mini": {
+      "estimated_cost_usd": 0.599201,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.4-mini",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "a471879d67ab9493b27ba56b513c0b2a1d0d8d170f5905b96928a9b181a668e5",
+      "usage": {
+        "input_tokens": 74795,
+        "output_tokens": 120690
+      }
+    },
+    "openai/gpt-5.4-nano": {
+      "estimated_cost_usd": 0.059644,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.4-nano",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "425a6b54f8cec979e7f6f26aa431167c49d90d5bf089764f89cb2490644a9dc8",
+      "usage": {
+        "input_tokens": 74795,
+        "output_tokens": 35748
+      }
+    },
+    "openai/gpt-5.5": {
+      "estimated_cost_usd": 2.708665,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.5-2026-04-23",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "bd3a92b203743818fc57f3e5465a89ec09dce94ed3b44a40a8e4dde9b351f6df",
+      "usage": {
+        "input_tokens": 74795,
+        "output_tokens": 77823
+      }
+    },
+    "openai/gpt-5.6-luna": {
+      "estimated_cost_usd": 0.218753,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.6-luna",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "eb94be2d1bd33be2cf1c153b833b497840b9af32e1ff6eb9f28c2f353a1e815f",
+      "usage": {
+        "input_tokens": 74795,
+        "output_tokens": 23993
+      }
+    },
+    "openai/gpt-5.6-sol": {
+      "estimated_cost_usd": 1.281235,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.6-sol",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "ba6a047cd0a6e396e49f51affbe72c819b88d112cba8ed0081d10fbcb2216481",
+      "usage": {
+        "input_tokens": 74795,
+        "output_tokens": 30242
+      }
+    },
+    "openai/gpt-5.6-terra": {
+      "estimated_cost_usd": 0.393477,
+      "inference_config": {
+        "adapter_version": "openai-responses-v1",
+        "anthropic_effort": null,
+        "max_output_tokens": 12000,
+        "provider": "openai",
+        "reasoning_effort": "high",
+        "requested_model": "gpt-5.6-terra",
+        "structured_output": false,
+        "thinking_budget_tokens": null,
+        "thinking_mode": null
+      },
+      "inference_config_sha256": "e0ae303beb5e17c2c42977439eecc20e18350b43f75abd4e11809e3700aa1b00",
+      "usage": {
+        "input_tokens": 74795,
+        "output_tokens": 13766
+      }
+    }
+  },
+  "output_format": "winner_only",
+  "panel_estimated_cost_usd": 11.735944,
+  "question_count": 20,
+  "question_sha256": {
+    "adur_buckingham": "d7138bcf292d99a07e7311c66edcea911e2d519271a7822752f4a9f66fbe49bd",
+    "basingstoke-and-deane_winklebury-manydown": "1c2d6cefce7edd630a08fe95f80a8a72a1d608ac461a4e69090a3fd6108ca2a3",
+    "cambridge_west-chesterton": "9678a16683af00e81617fa889a717604c8e94153f9695405ebe50f45dc3a012b",
+    "cherwell_deddington": "839d66800b8cfdd4c220a13d5a3e342833893732b16c80d6dcb3298442b45fc5",
+    "chorley_chorley-east": "4740b6b7a881b5609abd78ec3b36e98ba764cd322ce2cae900fe1d111cfe4ad7",
+    "city-of-lincoln_moorland": "1e68084792ef16ccf94821a5b455808b70c0e3e21433727e3bf18b6fc0c0b03c",
+    "colchester_prettygate": "4704d29357d89f80d3032065244e4c2b7477546c93ec39a214e9e9285efdf882",
+    "exeter_mincinglake-whipton": "6669b28d57ee3751628fd1a4b08f0fcf7748421b4c9e0e9ac6e439ef19677c09",
+    "hartlepool_throston": "66e4c416de90cc9dbbc4dfd8c7f45ad612ce56897787a6b48cc7d731bb19b123",
+    "leeds_killingbeck-seacroft": "7932b0075358e0a91d356b0f7445c53b95900451e0664cf195a914ff2316cce2",
+    "norwich_bowthorpe": "68430cd1efd0e3f41b765babbbcda6fa73f0ac56529ade766cd394b41aba6d05",
+    "pendle_brierfield-east-clover-hill": "682c7dec472f1341b4b906f4b39cd0aff08505d99ba4c4a82033ba8f3d509c2b",
+    "plymouth_sutton-and-mount-gould": "52424b9e43645310059df83f7f7497e872399e8ce19384acd55be1da8497b3df",
+    "portsmouth_fratton": "b0e8be265ae4f44c369fda553a60c956ab9cd07107c7dda03ea012b90d805c28",
+    "rugby_new-bilton": "d8f8e1b4238f51977c7bdc4cd95e060c93be4d13943305542b71c6d948b9174c",
+    "salford_eccles": "156b6889dcee088047a4ea217ac212c0fcfca0d6c4a6575709e2ad67d015260e",
+    "sheffield_crookes-crosspool": "369c0d56509da6448d49b96097ccae4bb364c01e93ab0c8f95026926efe7c56f",
+    "watford_holywell": "0589c5d53e1103e7001630c32532bf420191cfb6d7f53828d9f3a695145d498f",
+    "welwyn-hatfield_peartree": "5d7f3970b21667adbd454ab2be11f7ab706c7dd54373669e82719c37af150923",
+    "winchester_central-meon-valley": "abab903469838995e5639251388f644ef0e39f419b2cf45d8f7e7fb4fe8fc4f3"
+  },
+  "within_budget_reference": true
+}
