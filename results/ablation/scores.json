@@ -1,0 +1,435 @@
+{
+  "details": [
+    {
+      "brier_score": 0.41400000000000003,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "joint",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 11.200000000000003,
+      "vote_share_mae": 6.767863664029216,
+      "winner_probability": 0.47
+    },
+    {
+      "brier_score": 0.15360000000000001,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "joint",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 10.729999999999997,
+      "vote_share_mae": 15.65746549560853,
+      "winner_probability": 0.7
+    },
+    {
+      "brier_score": 0.14659999999999995,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "joint",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 10.479999999999997,
+      "vote_share_mae": 6.4415770609319,
+      "winner_probability": 0.68
+    },
+    {
+      "brier_score": 1.3874,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "joint",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "vote_share_mae": 7.400918403391027,
+      "winner_probability": 0.04
+    },
+    {
+      "brier_score": 0.35899999999999993,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "joint",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 4.539999999999999,
+      "vote_share_mae": 6.2609686609686594,
+      "winner_probability": 0.54
+    },
+    {
+      "brier_score": 0.3634,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.52
+    },
+    {
+      "brier_score": 0.15365000000000004,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7
+    },
+    {
+      "brier_score": 0.23180000000000003,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6
+    },
+    {
+      "brier_score": 1.3095999999999999,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.06
+    },
+    {
+      "brier_score": 0.22820000000000001,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.62
+    },
+    {
+      "brier_score": 0.7896,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "joint",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 0.0,
+      "turnout_mae": 11.200000000000003,
+      "vote_share_mae": 11.154351795496044,
+      "winner_probability": 0.23
+    },
+    {
+      "brier_score": 0.30339999999999995,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "joint",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 10.729999999999997,
+      "vote_share_mae": 12.257465495608532,
+      "winner_probability": 0.54
+    },
+    {
+      "brier_score": 0.29460000000000003,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "joint",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 9.879999999999995,
+      "vote_share_mae": 6.921577060931898,
+      "winner_probability": 0.58
+    },
+    {
+      "brier_score": 1.3501999999999998,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "joint",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "vote_share_mae": 7.934793359237018,
+      "winner_probability": 0.02
+    },
+    {
+      "brier_score": 0.10980000000000001,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "joint",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 4.039999999999999,
+      "vote_share_mae": 5.441025641025641,
+      "winner_probability": 0.72
+    },
+    {
+      "brier_score": 0.4870000000000001,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.41
+    },
+    {
+      "brier_score": 0.20620000000000002,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.61
+    },
+    {
+      "brier_score": 0.44660000000000005,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.44
+    },
+    {
+      "brier_score": 1.0222,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.14
+    },
+    {
+      "brier_score": 0.11600000000000002,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.71
+    },
+    {
+      "brier_score": 0.29252665416501583,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "joint",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 10.700000000000003,
+      "vote_share_mae": 8.280706025562996,
+      "winner_probability": 0.5894105894105894
+    },
+    {
+      "brier_score": 0.06939999999999999,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "joint",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 10.229999999999997,
+      "vote_share_mae": 13.05746549560853,
+      "winner_probability": 0.78
+    },
+    {
+      "brier_score": 0.3606,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "joint",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 10.479999999999997,
+      "vote_share_mae": 6.8415770609318995,
+      "winner_probability": 0.52
+    },
+    {
+      "brier_score": 1.19925,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "joint",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "vote_share_mae": 7.046697280113034,
+      "winner_probability": 0.1
+    },
+    {
+      "brier_score": 0.2594,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "joint",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 7.539999999999999,
+      "vote_share_mae": 5.218233618233618,
+      "winner_probability": 0.58
+    },
+    {
+      "brier_score": 0.39054999999999995,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.53
+    },
+    {
+      "brier_score": 0.06939999999999999,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.78
+    },
+    {
+      "brier_score": 0.43700000000000006,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.45
+    },
+    {
+      "brier_score": 1.2704,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.07
+    },
+    {
+      "brier_score": 0.189,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.64
+    },
+    {
+      "brier_score": 0.5426,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "joint",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 0.0,
+      "turnout_mae": 10.700000000000003,
+      "vote_share_mae": 6.467194157029823,
+      "winner_probability": 0.4
+    },
+    {
+      "brier_score": 0.2934,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "joint",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 10.229999999999997,
+      "vote_share_mae": 11.457465495608531,
+      "winner_probability": 0.55
+    },
+    {
+      "brier_score": 0.14979999999999996,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "joint",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 9.479999999999997,
+      "vote_share_mae": 6.4415770609319,
+      "winner_probability": 0.68
+    },
+    {
+      "brier_score": 1.3459999999999999,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "joint",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "vote_share_mae": 6.246697280113034,
+      "winner_probability": 0.04
+    },
+    {
+      "brier_score": 0.06454199999999997,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "joint",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "turnout_mae": 6.039999999999999,
+      "vote_share_mae": 4.841025641025642,
+      "winner_probability": 0.8
+    },
+    {
+      "brier_score": 0.46640000000000004,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.45
+    },
+    {
+      "brier_score": 0.08075,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.76
+    },
+    {
+      "brier_score": 0.1906,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.66
+    },
+    {
+      "brier_score": 1.22845,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.09
+    },
+    {
+      "brier_score": 0.16804999999999995,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.68
+    }
+  ],
+  "errors": [],
+  "groups": [
+    {
+      "mean_brier_score": 0.49212,
+      "mean_top_choice_accuracy": 0.8,
+      "mean_turnout_mae": 9.237499999999999,
+      "mean_vote_share_mae": 8.505758656985867,
+      "mean_winner_probability": 0.48600000000000004,
+      "model": "anthropic/claude-haiku-4-5",
+      "n": 5,
+      "output_format": "joint"
+    },
+    {
+      "mean_brier_score": 0.45732999999999996,
+      "mean_top_choice_accuracy": 0.8,
+      "mean_winner_probability": 0.5,
+      "model": "anthropic/claude-haiku-4-5",
+      "n": 5,
+      "output_format": "winner_only"
+    },
+    {
+      "mean_brier_score": 0.56952,
+      "mean_top_choice_accuracy": 0.6,
+      "mean_turnout_mae": 8.962499999999999,
+      "mean_vote_share_mae": 8.741842670459826,
+      "mean_winner_probability": 0.418,
+      "model": "openai/gpt-5.4-mini",
+      "n": 5,
+      "output_format": "joint"
+    },
+    {
+      "mean_brier_score": 0.4556,
+      "mean_top_choice_accuracy": 0.8,
+      "mean_winner_probability": 0.462,
+      "model": "openai/gpt-5.4-mini",
+      "n": 5,
+      "output_format": "winner_only"
+    },
+    {
+      "mean_brier_score": 0.43623533083300314,
+      "mean_top_choice_accuracy": 0.8,
+      "mean_turnout_mae": 9.737499999999999,
+      "mean_vote_share_mae": 8.088935896090016,
+      "mean_winner_probability": 0.5138821178821179,
+      "model": "openai/gpt-5.4-nano",
+      "n": 5,
+      "output_format": "joint"
+    },
+    {
+      "mean_brier_score": 0.47126999999999997,
+      "mean_top_choice_accuracy": 0.8,
+      "mean_winner_probability": 0.49400000000000005,
+      "model": "openai/gpt-5.4-nano",
+      "n": 5,
+      "output_format": "winner_only"
+    },
+    {
+      "mean_brier_score": 0.47926839999999993,
+      "mean_top_choice_accuracy": 0.6,
+      "mean_turnout_mae": 9.112499999999999,
+      "mean_vote_share_mae": 7.090791926941786,
+      "mean_winner_probability": 0.49400000000000005,
+      "model": "openai/gpt-5.6-luna",
+      "n": 5,
+      "output_format": "joint"
+    },
+    {
+      "mean_brier_score": 0.42685000000000006,
+      "mean_top_choice_accuracy": 0.8,
+      "mean_winner_probability": 0.528,
+      "model": "openai/gpt-5.6-luna",
+      "n": 5,
+      "output_format": "winner_only"
+    }
+  ]
+}

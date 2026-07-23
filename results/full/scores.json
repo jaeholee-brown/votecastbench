@@ -1,0 +1,679 @@
+{
+  "details": [
+    {
+      "brier_score": 0.3634,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.52
+    },
+    {
+      "brier_score": 1.37435,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "basingstoke-and-deane_winklebury-manydown",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.005
+    },
+    {
+      "brier_score": 1.050142142927164,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "cambridge_west-chesterton",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.16831683168316833
+    },
+    {
+      "brier_score": 0.15365000000000004,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7
+    },
+    {
+      "brier_score": 0.34959999999999997,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "chorley_chorley-east",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.55
+    },
+    {
+      "brier_score": 1.1858,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "city-of-lincoln_moorland",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.1
+    },
+    {
+      "brier_score": 0.28340000000000004,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "colchester_prettygate",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6
+    },
+    {
+      "brier_score": 0.23180000000000003,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6
+    },
+    {
+      "brier_score": 0.13540000000000002,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "hartlepool_throston",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7
+    },
+    {
+      "brier_score": 1.68255,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "leeds_killingbeck-seacroft",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.04
+    },
+    {
+      "brier_score": 1.3095999999999999,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.06
+    },
+    {
+      "brier_score": 0.49240000000000006,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "pendle_brierfield-east-clover-hill",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.42
+    },
+    {
+      "brier_score": 1.1684,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "plymouth_sutton-and-mount-gould",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.18
+    },
+    {
+      "brier_score": 0.551,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "portsmouth_fratton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.38
+    },
+    {
+      "brier_score": 0.2482,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "rugby_new-bilton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.62
+    },
+    {
+      "brier_score": 0.015551999999999995,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "salford_eccles",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.9
+    },
+    {
+      "brier_score": 0.09175,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "sheffield_crookes-crosspool",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.76
+    },
+    {
+      "brier_score": 0.9194,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "watford_holywell",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.28
+    },
+    {
+      "brier_score": 0.22820000000000001,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.62
+    },
+    {
+      "brier_score": 0.08994999999999999,
+      "model": "anthropic/claude-haiku-4-5",
+      "output_format": "winner_only",
+      "question_id": "winchester_central-meon-valley",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.77
+    },
+    {
+      "brier_score": 0.4870000000000001,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.41
+    },
+    {
+      "brier_score": 1.1056000000000001,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "basingstoke-and-deane_winklebury-manydown",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.08
+    },
+    {
+      "brier_score": 0.4880000000000001,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "cambridge_west-chesterton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.43
+    },
+    {
+      "brier_score": 0.20620000000000002,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.61
+    },
+    {
+      "brier_score": 0.46260000000000007,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "chorley_chorley-east",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.46
+    },
+    {
+      "brier_score": 1.0484,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "city-of-lincoln_moorland",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.17
+    },
+    {
+      "brier_score": 0.4166,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "colchester_prettygate",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.48
+    },
+    {
+      "brier_score": 0.44660000000000005,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.44
+    },
+    {
+      "brier_score": 0.5126000000000001,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "hartlepool_throston",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.41
+    },
+    {
+      "brier_score": 1.8447379999999998,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "leeds_killingbeck-seacroft",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.02
+    },
+    {
+      "brier_score": 1.0222,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.14
+    },
+    {
+      "brier_score": 0.42380000000000007,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "pendle_brierfield-east-clover-hill",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.44
+    },
+    {
+      "brier_score": 1.6093499999999998,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "plymouth_sutton-and-mount-gould",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.06
+    },
+    {
+      "brier_score": 0.6577999999999999,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "portsmouth_fratton",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.31
+    },
+    {
+      "brier_score": 0.4302,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "rugby_new-bilton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.48
+    },
+    {
+      "brier_score": 0.006349999999999993,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "salford_eccles",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.93
+    },
+    {
+      "brier_score": 0.28945000000000004,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "sheffield_crookes-crosspool",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.57
+    },
+    {
+      "brier_score": 1.3528,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "watford_holywell",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.01
+    },
+    {
+      "brier_score": 0.11600000000000002,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.71
+    },
+    {
+      "brier_score": 0.08800000000000001,
+      "model": "openai/gpt-5.4-mini",
+      "output_format": "winner_only",
+      "question_id": "winchester_central-meon-valley",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.75
+    },
+    {
+      "brier_score": 0.39054999999999995,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.53
+    },
+    {
+      "brier_score": 1.359,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "basingstoke-and-deane_winklebury-manydown",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.01
+    },
+    {
+      "brier_score": 0.6158,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "cambridge_west-chesterton",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.36
+    },
+    {
+      "brier_score": 0.06939999999999999,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.78
+    },
+    {
+      "brier_score": 0.5756,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "chorley_chorley-east",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.4
+    },
+    {
+      "brier_score": 1.1106,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "city-of-lincoln_moorland",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.13
+    },
+    {
+      "brier_score": 0.3293999999999999,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "colchester_prettygate",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.55
+    },
+    {
+      "brier_score": 0.43700000000000006,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.45
+    },
+    {
+      "brier_score": 0.40540000000000004,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "hartlepool_throston",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.48
+    },
+    {
+      "brier_score": 1.9116039999999999,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "leeds_killingbeck-seacroft",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.01
+    },
+    {
+      "brier_score": 1.2704,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.07
+    },
+    {
+      "brier_score": 0.5055999999999999,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "pendle_brierfield-east-clover-hill",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.4
+    },
+    {
+      "brier_score": 1.555568,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "plymouth_sutton-and-mount-gould",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.05
+    },
+    {
+      "brier_score": 0.5634,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "portsmouth_fratton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.37
+    },
+    {
+      "brier_score": 0.22580000000000003,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "rugby_new-bilton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6
+    },
+    {
+      "brier_score": 0.04160000000000002,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "salford_eccles",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.82
+    },
+    {
+      "brier_score": 0.2132,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "sheffield_crookes-crosspool",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.62
+    },
+    {
+      "brier_score": 0.72525,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "watford_holywell",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.34
+    },
+    {
+      "brier_score": 0.189,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.64
+    },
+    {
+      "brier_score": 0.1566,
+      "model": "openai/gpt-5.4-nano",
+      "output_format": "winner_only",
+      "question_id": "winchester_central-meon-valley",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.67
+    },
+    {
+      "brier_score": 0.46640000000000004,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.45
+    },
+    {
+      "brier_score": 1.405168,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "basingstoke-and-deane_winklebury-manydown",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.002
+    },
+    {
+      "brier_score": 0.44445000000000007,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "cambridge_west-chesterton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.45
+    },
+    {
+      "brier_score": 0.08075,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.76
+    },
+    {
+      "brier_score": 0.37017799999999995,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "chorley_chorley-east",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.56
+    },
+    {
+      "brier_score": 0.5576,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "city-of-lincoln_moorland",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.39
+    },
+    {
+      "brier_score": 0.569,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "colchester_prettygate",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.445
+    },
+    {
+      "brier_score": 0.1906,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.66
+    },
+    {
+      "brier_score": 0.08174999999999999,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "hartlepool_throston",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.78
+    },
+    {
+      "brier_score": 1.706182,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "leeds_killingbeck-seacroft",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.065
+    },
+    {
+      "brier_score": 1.22845,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.09
+    },
+    {
+      "brier_score": 0.5991999999999998,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "pendle_brierfield-east-clover-hill",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.34
+    },
+    {
+      "brier_score": 0.7183499999999999,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "plymouth_sutton-and-mount-gould",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.3
+    },
+    {
+      "brier_score": 0.6001,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "portsmouth_fratton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.365
+    },
+    {
+      "brier_score": 0.32704999999999995,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "rugby_new-bilton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.56
+    },
+    {
+      "brier_score": 0.0005180000000000008,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "salford_eccles",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.98
+    },
+    {
+      "brier_score": 0.29617465847325036,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "sheffield_crookes-crosspool",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5622489959839359
+    },
+    {
+      "brier_score": 0.734954,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "watford_holywell",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.37
+    },
+    {
+      "brier_score": 0.16804999999999995,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.68
+    },
+    {
+      "brier_score": 0.06739999999999999,
+      "model": "openai/gpt-5.6-luna",
+      "output_format": "winner_only",
+      "question_id": "winchester_central-meon-valley",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.79
+    }
+  ],
+  "errors": [],
+  "groups": [
+    {
+      "mean_brier_score": 0.5962272071463582,
+      "mean_top_choice_accuracy": 0.65,
+      "mean_winner_probability": 0.44866584158415845,
+      "model": "anthropic/claude-haiku-4-5",
+      "n": 20,
+      "output_format": "winner_only"
+    },
+    {
+      "mean_brier_score": 0.6507144,
+      "mean_top_choice_accuracy": 0.65,
+      "mean_winner_probability": 0.3955,
+      "model": "openai/gpt-5.4-mini",
+      "n": 20,
+      "output_format": "winner_only"
+    },
+    {
+      "mean_brier_score": 0.6325386,
+      "mean_top_choice_accuracy": 0.6,
+      "mean_winner_probability": 0.414,
+      "model": "openai/gpt-5.4-nano",
+      "n": 20,
+      "output_format": "winner_only"
+    },
+    {
+      "mean_brier_score": 0.5306162329236626,
+      "mean_top_choice_accuracy": 0.7,
+      "mean_winner_probability": 0.47996244979919683,
+      "model": "openai/gpt-5.6-luna",
+      "n": 20,
+      "output_format": "winner_only"
+    }
+  ]
+}

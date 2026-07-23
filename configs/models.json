@@ -3,29 +3,41 @@
     "id": "openai/gpt-5.4-nano",
     "provider": "openai",
     "model": "gpt-5.4-nano",
+    "knowledge_cutoff": "2025-08-31",
     "reasoning_effort": "high",
-    "max_output_tokens": 12000
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 0.2, "output": 1.25},
+    "documentation": "https://developers.openai.com/api/docs/models/gpt-5.4-nano"
   },
   {
     "id": "openai/gpt-5.4-mini",
     "provider": "openai",
     "model": "gpt-5.4-mini",
+    "knowledge_cutoff": "2025-08-31",
     "reasoning_effort": "high",
-    "max_output_tokens": 12000
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 0.75, "output": 4.5},
+    "documentation": "https://developers.openai.com/api/docs/models/gpt-5.4-mini"
   },
   {
     "id": "openai/gpt-5.6-luna",
     "provider": "openai",
     "model": "gpt-5.6-luna",
+    "knowledge_cutoff": "2026-02-16",
     "reasoning_effort": "high",
-    "max_output_tokens": 12000
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 1.0, "output": 6.0},
+    "documentation": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
   },
   {
     "id": "anthropic/claude-haiku-4-5",
     "provider": "anthropic",
     "model": "claude-haiku-4-5-20251001",
+    "reliable_knowledge_cutoff": "2025-02-28",
+    "training_data_cutoff": "2025-07-31",
     "thinking_budget_tokens": 4096,
-    "max_output_tokens": 12000
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 1.0, "output": 5.0},
+    "documentation": "https://platform.claude.com/docs/en/about-claude/models/overview"
   }
 ]
-

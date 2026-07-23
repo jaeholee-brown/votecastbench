@@ -1,0 +1,343 @@
+{
+  "details": [
+    {
+      "brier_score": 0.37245396588106855,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.4938938084569152
+    },
+    {
+      "brier_score": 0.40426787775732015,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.45648959944988826
+    },
+    {
+      "brier_score": 0.5085991476509677,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.38298926507018993
+    },
+    {
+      "brier_score": 0.8567169063715365,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.19652098282235267
+    },
+    {
+      "brier_score": 0.5848965026326415,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.3355221795319595
+    },
+    {
+      "brier_score": 0.5784365747747995,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "rugby_new-bilton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.3363349463496739
+    },
+    {
+      "brier_score": 0.5196041789575615,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "chorley_chorley-east",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.39429814517975725
+    },
+    {
+      "brier_score": 0.6381050371142645,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "cambridge_west-chesterton",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.3204768922281545
+    },
+    {
+      "brier_score": 0.29860556072252575,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "hartlepool_throston",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.5643512450851901
+    },
+    {
+      "brier_score": 1.16890602398594,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "leeds_killingbeck-seacroft",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.10801127633827202
+    },
+    {
+      "brier_score": 1.3476198047786327,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "basingstoke-and-deane_winklebury-manydown",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.009936755335528343
+    },
+    {
+      "brier_score": 1.1088811204586786,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "plymouth_sutton-and-mount-gould",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.11742059070250781
+    },
+    {
+      "brier_score": 0.4062348205043551,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "sheffield_crookes-crosspool",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.4651609776514776
+    },
+    {
+      "brier_score": 0.2097621097819039,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "salford_eccles",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.6044215912342417
+    },
+    {
+      "brier_score": 1.0991121176772727,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "city-of-lincoln_moorland",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.11028766455387616
+    },
+    {
+      "brier_score": 0.49138798916383886,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "portsmouth_fratton",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.42478760619690153
+    },
+    {
+      "brier_score": 0.13738568846278632,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "pendle_brierfield-east-clover-hill",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.7200595829195631
+    },
+    {
+      "brier_score": 0.36242056388331967,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "winchester_central-meon-valley",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.4997030946671235
+    },
+    {
+      "brier_score": 0.6411068305593891,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "watford_holywell",
+      "top_choice_accuracy": 0.0,
+      "winner_probability": 0.2998777078965758
+    },
+    {
+      "brier_score": 0.37668877444634397,
+      "model": "baseline/last-ward-party-share",
+      "output_format": "winner_only",
+      "question_id": "colchester_prettygate",
+      "top_choice_accuracy": 1.0,
+      "winner_probability": 0.4924791905644284
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "adur_buckingham",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cherwell_deddington",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "exeter_mincinglake-whipton",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "norwich_bowthorpe",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "welwyn-hatfield_peartree",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "rugby_new-bilton",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "chorley_chorley-east",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "cambridge_west-chesterton",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "hartlepool_throston",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "leeds_killingbeck-seacroft",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "basingstoke-and-deane_winklebury-manydown",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "plymouth_sutton-and-mount-gould",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "sheffield_crookes-crosspool",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "salford_eccles",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "city-of-lincoln_moorland",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "portsmouth_fratton",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "pendle_brierfield-east-clover-hill",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "winchester_central-meon-valley",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    },
+    {
+      "brier_score": 0.8333333333333334,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "watford_holywell",
+      "top_choice_accuracy": 0.16666666666666666,
+      "winner_probability": 0.16666666666666666
+    },
+    {
+      "brier_score": 0.8000000000000002,
+      "model": "baseline/uniform",
+      "output_format": "winner_only",
+      "question_id": "colchester_prettygate",
+      "top_choice_accuracy": 0.2,
+      "winner_probability": 0.2
+    }
+  ],
+  "errors": [],
+  "groups": [
+    {
+      "mean_brier_score": 0.6055595797782574,
+      "mean_top_choice_accuracy": 0.65,
+      "mean_winner_probability": 0.36665115511172885,
+      "model": "baseline/last-ward-party-share",
+      "n": 20,
+      "output_format": "winner_only"
+    },
+    {
+      "mean_brier_score": 0.8133333333333335,
+      "mean_top_choice_accuracy": 0.18666666666666668,
+      "mean_winner_probability": 0.18666666666666668,
+      "model": "baseline/uniform",
+      "n": 20,
+      "output_format": "winner_only"
+    }
+  ]
+}
