@@ -32,6 +32,26 @@ See [the complete 14-row table](results/fresh-500/RESULTS.md) and
 output-format ablation. Sonnet 5 ranked first in 91.3% of council-bootstrap
 resamples, but its paired Brier difference from Sonnet 4.6 still included zero.
 
+## Non-May temporal extension
+
+An independently curated extension adds 89 elections held on 20 dates from
+19 February through 16 July 2026, excluding 7 May. The same 12 model
+configurations produced all 1,068 requested forecasts with zero refusals.
+Sonnet 4.6 had the lowest point-estimate Brier score on this smaller stratum,
+but the top three were effectively tied:
+
+| Forecaster | Brier (95% interval) | Accuracy (95% interval) |
+|---|---:|---:|
+| Claude Sonnet 4.6, adaptive max | **0.6339** [0.5590, 0.7093] | 46.1% [35.3%, 56.7%] |
+| Claude Sonnet 5, adaptive xhigh | 0.6379 [0.5721, 0.7051] | 48.9% [38.6%, 59.3%] |
+| GPT-5.6 Terra, high | 0.6383 [0.5503, 0.7271] | **49.4%** [38.9%, 60.0%] |
+
+Pooling the two independently selected strata gives 589 questions. Sonnet 5
+leads the pooled Brier ranking at 0.5988, followed by Sonnet 4.6 at 0.6113 and
+GPT-5.6 Terra at 0.6668. See the
+[89-question ranking](results/non-may-89/RESULTS.md) and
+[pooled 589-question ranking](results/combined-589/RESULTS.md).
+
 ## Reproduce
 
 Requirements: Python 3.11+ and [uv](https://docs.astral.sh/uv/).
@@ -91,6 +111,7 @@ uv run python scripts/curate_expansion.py select
 uv run python scripts/curate_expansion.py fetch-ballots
 uv run python scripts/curate_expansion.py curate
 uv run python scripts/audit_expansion.py
+uv run python scripts/curate_non_may.py
 ```
 
 ## Repository map
@@ -98,9 +119,12 @@ uv run python scripts/audit_expansion.py
 - `data/questions.jsonl`: model-visible forecast packets
 - `data/labels.jsonl`: resolved outcomes, withheld during forecasting
 - `data/expansion/`: fresh questions, labels, selection, lineage, and audit
+- `data/non-may-89/`: non-May questions, labels, selection, lineage, and audit
 - `configs/models.json`: provider IDs, high-effort settings, cutoffs, and prices
 - `src/votecastbench/`: validation, prompting, async runners, and scoring
 - `results/fresh-500/`: 6,000 forecasts, scores, uncertainty, costs, and shards
+- `results/non-may-89/`: 1,068 forecasts, scores, uncertainty, and costs
+- `results/combined-589/`: pooled scores, uncertainty, and coverage summary
 - `results/panel/`: pooled predictions, scores, uncertainty, coverage, and costs
 - `results/full/`: original four-model result set retained for provenance
 - `METHODOLOGY.md`: curation, leakage controls, and metric definitions
