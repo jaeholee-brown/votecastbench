@@ -16,22 +16,25 @@ so those targets are retained only as an exploratory secondary track.
 Lower Brier score is better. Each API model made one high-effort forecast for
 each of the 20 questions. The 240-call panel is complete.
 
-| Forecaster | Inference setting | Brier | Top-choice accuracy |
+The rows are ordered by point estimate, not presented as a statistically
+resolved ranking. Intervals are 95% paired question-bootstrap intervals.
+
+| Forecaster | Inference setting | Brier (95% interval) | Top-choice accuracy |
 |---|---|---:|---:|
-| GPT-5.6 Luna | high | **0.5306** | **70%** |
-| GPT-5.6 Terra | high | 0.5418 | 65% |
-| Claude Sonnet 4.6 | adaptive max | 0.5660 | 60% |
-| Claude Sonnet 4.5 | 10k thinking | 0.5692 | 60% |
-| GPT-5.6 Sol | high | 0.5720 | **70%** |
-| GPT-5.5 | high | 0.5740 | 65% |
-| Claude Sonnet 5 | adaptive xhigh | 0.5769 | 67.5% |
-| Claude Haiku 4.5 | 4,096 thinking | 0.5962 | 65% |
-| Last-ward party-share baseline | deterministic | 0.6056 | 65% |
-| GPT-5.4 | high | 0.6230 | 60% |
-| GPT-5.2 | high | 0.6295 | 65% |
-| GPT-5.4 nano | high | 0.6325 | 60% |
-| GPT-5.4 mini | high | 0.6507 | 65% |
-| Uniform baseline | deterministic | 0.8133 | 18.7% |
+| GPT-5.6 Luna | high | **0.5306** [0.3486, 0.7393] | **70%** |
+| GPT-5.6 Terra | high | 0.5418 [0.3608, 0.7401] | 65% |
+| Claude Sonnet 4.6 | adaptive max | 0.5660 [0.3997, 0.7500] | 60% |
+| Claude Sonnet 4.5 | 10k thinking | 0.5692 [0.3780, 0.7817] | 60% |
+| GPT-5.6 Sol | high | 0.5720 [0.3534, 0.8241] | **70%** |
+| GPT-5.5 | high | 0.5740 [0.3605, 0.8191] | 65% |
+| Claude Sonnet 5 | adaptive xhigh | 0.5769 [0.4143, 0.7669] | 67.5% |
+| Claude Haiku 4.5 | 4,096 thinking | 0.5962 [0.3836, 0.8271] | 65% |
+| Last-ward party-share baseline | deterministic | 0.6056 [0.4690, 0.7568] | 65% |
+| GPT-5.4 | high | 0.6230 [0.3905, 0.8836] | 60% |
+| GPT-5.2 | high | 0.6295 [0.4254, 0.8581] | 65% |
+| GPT-5.4 nano | high | 0.6325 [0.4198, 0.8735] | 60% |
+| GPT-5.4 mini | high | 0.6507 [0.4453, 0.8826] | 65% |
+| Uniform baseline | deterministic | 0.8133 [0.8067, 0.8200] | 18.7% |
 
 See [RESULTS.md](RESULTS.md) for the output-format ablation, token use, and
 interpretation. This is a 20-question pilot, not a definitive model ranking.
@@ -83,6 +86,8 @@ uv run votecastbench run \
 uv run votecastbench score \
   --predictions results/panel/predictions.jsonl \
   --output results/panel/scores.json
+
+uv run python scripts/bootstrap_uncertainty.py
 ```
 
 Rebuild the curated data from Democracy Club:
@@ -97,7 +102,7 @@ uv run python scripts/curate.py
 - `data/labels.jsonl`: resolved outcomes, withheld during forecasting
 - `configs/models.json`: provider IDs, high-effort settings, cutoffs, and prices
 - `src/votecastbench/`: validation, prompting, async runners, and scoring
-- `results/panel/`: pooled raw predictions, scores, coverage, and costs
+- `results/panel/`: pooled predictions, scores, uncertainty, coverage, and costs
 - `results/full/`: original four-model result set retained for provenance
 - `METHODOLOGY.md`: curation, leakage controls, and metric definitions
 

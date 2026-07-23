@@ -102,6 +102,20 @@ Probability totals within 0.02 of one are normalized; wider discrepancies are
 invalid. Vote-share totals within two percentage points of 100 are normalized;
 wider discrepancies are invalid. All committed API forecasts passed validation.
 
+### Uncertainty
+
+The reported error bars use 100,000 nonparametric bootstrap resamples of the 20
+questions with a fixed seed. Resampling is paired: every forecaster is evaluated
+on the same sampled question indices in each replicate. The repository reports
+percentile 95% intervals for mean Brier, model-rank distributions, probability
+of being the best API model, probability of beating the last-ward baseline, and
+paired Brier differences versus GPT-5.6 Luna.
+
+These intervals measure sensitivity to the included questions only. They do not
+include model sampling variance because each model/question cell has one API
+call. The purposive cases are not an IID sample of all elections, so the bars
+should not be interpreted as population confidence guarantees.
+
 ## Models and inference
 
 The run on 23 July 2026 used:

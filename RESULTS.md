@@ -3,29 +3,49 @@
 ## Protected winner-only benchmark
 
 All 240 API forecasts completed and passed output validation. Lower Brier is
-better. Per-model cost covers the 20 successful panel forecasts and uses the
-run-date prices in `configs/models.json`.
+better. Rows are ordered by point estimate only; they are not a statistically
+resolved ranking. The intervals are 95% paired question-bootstrap intervals.
+Per-model cost covers the 20 successful panel forecasts.
 
-| Rank | Forecaster | Inference setting | Mean Brier | Top-choice accuracy | Mean probability on winner | Est. cost |
-|---:|---|---|---:|---:|---:|---:|
-| 1 | GPT-5.6 Luna | high | **0.5306** | **70%** | 0.4800 | $0.22 |
-| 2 | GPT-5.6 Terra | high | 0.5418 | 65% | 0.4673 | $0.39 |
-| 3 | Claude Sonnet 4.6 | adaptive max | 0.5660 | 60% | 0.4240 | $1.60 |
-| 4 | Claude Sonnet 4.5 | 10k thinking | 0.5692 | 60% | 0.4565 | $1.03 |
-| 5 | GPT-5.6 Sol | high | 0.5720 | **70%** | **0.4895** | $1.28 |
-| 6 | GPT-5.5 | high | 0.5740 | 65% | 0.4738 | $2.71 |
-| 7 | Claude Sonnet 5 | adaptive xhigh | 0.5769 | 67.5% | 0.4170 | $1.21 |
-| 8 | Claude Haiku 4.5 | 4,096 thinking | 0.5962 | 65% | 0.4487 | $0.38 |
-| 9 | Last-ward party-share baseline | deterministic | 0.6056 | 65% | 0.3667 | — |
-| 10 | GPT-5.4 | high | 0.6230 | 60% | 0.4598 | $1.75 |
-| 11 | GPT-5.2 | high | 0.6295 | 65% | 0.4232 | $0.51 |
-| 12 | GPT-5.4 nano | high | 0.6325 | 60% | 0.4140 | $0.06 |
-| 13 | GPT-5.4 mini | high | 0.6507 | 65% | 0.3955 | $0.60 |
-| 14 | Uniform baseline | deterministic | 0.8133 | 18.7% | 0.1867 | — |
+| Forecaster | Setting | Mean Brier (95% interval) | Accuracy | Mean probability on winner | Est. cost |
+|---|---|---:|---:|---:|---:|
+| GPT-5.6 Luna | high | **0.5306** [0.3486, 0.7393] | **70%** | 0.4800 | $0.22 |
+| GPT-5.6 Terra | high | 0.5418 [0.3608, 0.7401] | 65% | 0.4673 | $0.39 |
+| Claude Sonnet 4.6 | adaptive max | 0.5660 [0.3997, 0.7500] | 60% | 0.4240 | $1.60 |
+| Claude Sonnet 4.5 | 10k thinking | 0.5692 [0.3780, 0.7817] | 60% | 0.4565 | $1.03 |
+| GPT-5.6 Sol | high | 0.5720 [0.3534, 0.8241] | **70%** | **0.4895** | $1.28 |
+| GPT-5.5 | high | 0.5740 [0.3605, 0.8191] | 65% | 0.4738 | $2.71 |
+| Claude Sonnet 5 | adaptive xhigh | 0.5769 [0.4143, 0.7669] | 67.5% | 0.4170 | $1.21 |
+| Claude Haiku 4.5 | 4,096 thinking | 0.5962 [0.3836, 0.8271] | 65% | 0.4487 | $0.38 |
+| Last-ward baseline | deterministic | 0.6056 [0.4690, 0.7568] | 65% | 0.3667 | — |
+| GPT-5.4 | high | 0.6230 [0.3905, 0.8836] | 60% | 0.4598 | $1.75 |
+| GPT-5.2 | high | 0.6295 [0.4254, 0.8581] | 65% | 0.4232 | $0.51 |
+| GPT-5.4 nano | high | 0.6325 [0.4198, 0.8735] | 60% | 0.4140 | $0.06 |
+| GPT-5.4 mini | high | 0.6507 [0.4453, 0.8826] | 65% | 0.3955 | $0.60 |
+| Uniform baseline | deterministic | 0.8133 [0.8067, 0.8200] | 18.7% | 0.1867 | — |
 
-Seven of the twelve API models beat the simple local-history baseline on this
-run. GPT-5.6 Luna remained first, with Terra second. These differences should
-not be overinterpreted without more questions and repeated samples.
+## Uncertainty and ranking stability
+
+The apparent fine-grained order is mostly noise. In 100,000 paired bootstrap
+resamples, Luna was the best API model 48.3% of the time and Terra 24.9%.
+Luna's central 95% rank range was 1–7; Terra's was 1–6. Pairwise Brier
+difference intervals versus Luna included zero for every API model except
+GPT-5.2, GPT-5.4 nano, and GPT-5.4 mini. These exploratory intervals are not
+adjusted for multiple comparisons.
+
+The point order is also sensitive to individual elections. On Plymouth Sutton
+and Mount Gould, every API model assigned the eventual winner at most 30%;
+Terra's Brier was 0.433 worse than Luna's on that one question. Removing only
+that case puts Terra first at 0.5097, Luna second at 0.5207, and GPT-5.5 third
+at 0.5266. One case is 5% of this pilot, and multiclass Brier correctly
+penalizes confident mistakes heavily.
+
+The bootstrap is paired: each replicate resamples the same 20 question indices
+for every forecaster. It captures sensitivity to this question set, not model
+sampling variance. Because the questions were purposively curated rather than
+drawn IID, the intervals are diagnostics rather than population confidence
+guarantees. Repeated calls and substantially more questions are needed for a
+serious model ranking.
 
 ## Did vote-share and turnout targets muddy winner forecasts?
 
@@ -80,6 +100,7 @@ breakdown is in `results/panel/manifest.json`.
 
 - `results/panel/predictions.jsonl`: 240 raw validated winner-only forecasts
 - `results/panel/scores.json`: aggregate and question-level panel scores
+- `results/panel/uncertainty.json`: paired-bootstrap intervals and rank stability
 - `results/panel/manifest.json`: hashes, coverage, usage, and cumulative costs
 - `results/full/`: original four-model artifacts retained unchanged
 - `results/ablation/predictions.jsonl`: 40 paired-format forecasts
