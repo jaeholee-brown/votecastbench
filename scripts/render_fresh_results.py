@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the fresh-500 model panel and uncertainty into one durable table."""
+"""Render a model panel and uncertainty report into one durable table."""
 
 from __future__ import annotations
 
@@ -32,6 +32,8 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=Path("results/fresh-500/RESULTS.md"),
     )
+    parser.add_argument("--title", default="Fresh 500-question results")
+    parser.add_argument("--panel-label", default="Fresh")
     return parser.parse_args()
 
 
@@ -57,8 +59,10 @@ def main() -> None:
     manifest = read_json(args.manifest)
     questions = read_jsonl(args.questions)
     no_ward_history = sum(not row["ward_history"] for row in questions)
+    organisation_count = len({row["election"]["organisation"] for row in questions})
+    question_count = len(questions)
     lines = [
-        "# Fresh 500-question results",
+        f"# {args.title}",
         "",
         (
             "Primary metric: multiclass Brier score (lower is better). Accuracy is the "
@@ -67,7 +71,7 @@ def main() -> None:
         ),
         "",
         "| Rank | Forecaster | Brier [95% CI] | Accuracy % [95% CI] "
-        "| Vote-share MAE | Fresh API cost |",
+        "| Vote-share MAE | API cost |",
         "|---:|---|---:|---:|---:|---:|",
     ]
     for rank, row in enumerate(uncertainty["forecasters"], start=1):
@@ -93,7 +97,7 @@ def main() -> None:
         [
             "",
             (
-                f"Fresh model-panel estimated cost: "
+                f"{args.panel_label} model-panel estimated cost: "
                 f"${manifest['panel_estimated_cost_usd']:.6f}. "
                 f"All-in cumulative estimated cost including prior work: "
                 f"${manifest['cumulative_estimated_cost_usd']:.6f}."
@@ -107,11 +111,12 @@ def main() -> None:
             "",
             (
                 f"The last-ward baseline uses a documented uniform fallback for the "
-                f"{no_ward_history}/500 packets with no supplied same-ward history."
+                f"{no_ward_history}/{question_count} packets with no supplied same-ward history."
             ),
             "",
             (
-                "Intervals resample 95 councils and capture question/organisation sampling "
+                f"Intervals resample {organisation_count} councils and capture "
+                "question/organisation sampling "
                 "uncertainty, not model sampling variance; every model-question cell has one "
                 "successful forecast."
             ),

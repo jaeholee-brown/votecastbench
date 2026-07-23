@@ -2,7 +2,7 @@
 
 Primary metric: multiclass Brier score (lower is better). Accuracy is the fractional top-choice accuracy used by the scorer (higher is better). Brackets are paired 95% organisation-cluster bootstrap intervals.
 
-| Rank | Forecaster | Brier [95% CI] | Accuracy % [95% CI] | Vote-share MAE | Fresh API cost |
+| Rank | Forecaster | Brier [95% CI] | Accuracy % [95% CI] | Vote-share MAE | API cost |
 |---:|---|---:|---:|---:|---:|
 | 1 | anthropic/claude-sonnet-5-xhigh | 0.5918 [0.5479, 0.6365] | 56.4 [50.9, 61.9] | N/A | $26.213 |
 | 2 | anthropic/claude-sonnet-4-6-max | 0.6073 [0.5524, 0.6627] | 54.0 [48.1, 59.9] | N/A | $33.048 |
