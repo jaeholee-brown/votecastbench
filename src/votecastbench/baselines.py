@@ -35,6 +35,12 @@ def last_ward_party_share_forecast(question: dict[str, Any]) -> dict[str, Any]:
     the previous valid-vote total. Labour and Labour & Co-operative labels are
     treated as one party family. No candidate identity information is used.
     """
+    if not question["ward_history"]:
+        forecast = uniform_forecast(question)
+        forecast["rationale"] = (
+            "Deterministic reference: uniform fallback because no same-ward history is supplied."
+        )
+        return forecast
     latest = max(question["ward_history"], key=lambda row: row["election_date"])
     prior_votes: dict[str, int] = {}
     for candidate in latest["candidates"]:

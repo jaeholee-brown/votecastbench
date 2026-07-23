@@ -50,6 +50,50 @@ def _add_usage(total: dict[str, int], usage: dict[str, Any]) -> None:
             total[key] = total.get(key, 0) + value
 
 
+def merge_observation_records(
+    prior: dict[str, Any],
+    current: dict[str, Any],
+) -> dict[str, Any]:
+    """Merge repeated runs of one observation without losing billed attempts."""
+    if prior.get("observation_id") != current.get("observation_id"):
+        raise ValueError("cannot merge records with different observation IDs")
+    if prior == current:
+        return dict(prior)
+    prior_log = list(prior.get("attempt_log", []))
+    current_log = list(current.get("attempt_log", []))
+    if prior_log and current_log:
+        if len(prior_log) <= len(current_log) and current_log[: len(prior_log)] == prior_log:
+            return dict(current)
+        if len(current_log) <= len(prior_log) and prior_log[: len(current_log)] == current_log:
+            return dict(prior)
+    if prior.get("status") == "ok" and current.get("status") == "ok":
+        prior_response = prior.get("provider_response_id")
+        current_response = current.get("provider_response_id")
+        if prior_response != current_response or prior.get("forecast") != current.get("forecast"):
+            raise ValueError(
+                "conflicting successful responses for observation "
+                f"{prior.get('observation_id')}"
+            )
+        return dict(current if len(current_log) >= len(prior_log) else prior)
+    usage: dict[str, int] = {}
+    _add_usage(usage, prior.get("usage", {}))
+    _add_usage(usage, current.get("usage", {}))
+    attempt_log = [*prior_log, *current_log]
+    merged = {
+        **prior,
+        **current,
+        "usage": usage,
+        "attempt_log": attempt_log,
+        "attempts": len(attempt_log)
+        or (int(prior.get("attempts", 0)) + int(current.get("attempts", 0))),
+    }
+    prior_errors = list(prior.get("errors", []))
+    current_errors = list(current.get("errors", []))
+    if prior_errors or current_errors:
+        merged["errors"] = [*prior_errors, *current_errors]
+    return merged
+
+
 async def _run_one(
     client: httpx.AsyncClient,
     semaphore: asyncio.Semaphore,
@@ -224,10 +268,19 @@ async def run_benchmark(
                 f"{row['output_format']} {row['question_id']}",
                 flush=True,
             )
-    combined_by_key = {
-        row.get("observation_id") or (row["question_id"], row["model"], row["output_format"]): row
-        for row in [*existing, *fresh]
-    }
+    combined_by_key = {}
+    for row in [*existing, *fresh]:
+        key = row.get("observation_id") or (
+            row["question_id"],
+            row["model"],
+            row["output_format"],
+        )
+        prior = combined_by_key.get(key)
+        combined_by_key[key] = (
+            merge_observation_records(prior, row)
+            if prior is not None and row.get("observation_id")
+            else row
+        )
     combined = sorted(
         combined_by_key.values(),
         key=lambda row: (row["model"], row["output_format"], row["question_id"]),

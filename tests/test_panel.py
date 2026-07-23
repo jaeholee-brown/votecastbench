@@ -58,6 +58,47 @@ def test_pool_preserves_existing_provenance() -> None:
     assert rows[0]["observation_id"] == "old-observation-id"
 
 
+def test_pool_merges_retry_usage_for_same_observation() -> None:
+    failed = {
+        "question_id": "q1",
+        "model": "openai/example",
+        "output_format": "winner_only",
+        "status": "error",
+        "usage": {"input_tokens": 100, "output_tokens": 20},
+        "attempt_log": [{"attempt": 1, "status": "error"}],
+    }
+    enriched_failed = pool_records([[failed]], [QUESTION], [SPEC])[0]
+    succeeded = {
+        **enriched_failed,
+        "status": "ok",
+        "forecast": {"winner_probabilities": [], "rationale": ""},
+        "usage": {"input_tokens": 80, "output_tokens": 10},
+        "attempt_log": [{"attempt": 1, "status": "ok"}],
+    }
+
+    row = pool_records([[enriched_failed], [succeeded]], [QUESTION], [SPEC])[0]
+
+    assert row["status"] == "ok"
+    assert row["usage"] == {"input_tokens": 180, "output_tokens": 30}
+    assert row["attempts"] == 2
+
+
+def test_pooling_the_same_record_twice_is_idempotent() -> None:
+    legacy = {
+        "question_id": "q1",
+        "model": "openai/example",
+        "output_format": "winner_only",
+        "status": "ok",
+        "forecast": {"winner_probabilities": [], "rationale": ""},
+        "usage": {"input_tokens": 100, "output_tokens": 20},
+    }
+    row = pool_records([[legacy]], [QUESTION], [SPEC])[0]
+
+    duplicate = pool_records([[row], [row]], [QUESTION], [SPEC])[0]
+
+    assert duplicate["usage"] == {"input_tokens": 100, "output_tokens": 20}
+
+
 def test_cost_and_manifest_coverage() -> None:
     record = {
         "question_id": "q1",

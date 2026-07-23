@@ -32,3 +32,15 @@ def test_last_party_share_maps_labour_coop_and_smooths_new_party() -> None:
     }
     assert sum(probabilities.values()) == pytest.approx(1)
     assert probabilities["lab"] > probabilities["con"] > probabilities["new"] > 0
+
+
+def test_last_party_share_uses_uniform_fallback_without_history() -> None:
+    question = {
+        "candidates": [{"candidate_id": "a"}, {"candidate_id": "b"}],
+        "ward_history": [],
+    }
+
+    result = last_ward_party_share_forecast(question)
+
+    assert result["winner_probabilities"] == uniform_forecast(question)["winner_probabilities"]
+    assert "uniform fallback" in result["rationale"]

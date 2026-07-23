@@ -2,7 +2,7 @@ import asyncio
 import json
 
 from votecastbench.providers import ProviderResult, _anthropic_compatible_schema
-from votecastbench.runner import _run_one, extract_json_object
+from votecastbench.runner import _run_one, extract_json_object, merge_observation_records
 
 
 def test_extract_json_object_accepts_plain_json() -> None:
@@ -124,3 +124,26 @@ def test_run_one_accounts_for_usage_from_invalid_retried_response(monkeypatch) -
     assert row["status"] == "ok"
     assert row["usage"] == {"input_tokens": 22, "output_tokens": 4}
     assert [attempt["status"] for attempt in row["attempt_log"]] == ["error", "ok"]
+
+
+def test_resume_merge_preserves_usage_from_prior_failed_run() -> None:
+    prior = {
+        "observation_id": "observation",
+        "status": "error",
+        "usage": {"input_tokens": 10, "output_tokens": 2},
+        "attempt_log": [{"attempt": 1, "status": "error"}],
+        "errors": ["first run failed"],
+    }
+    current = {
+        "observation_id": "observation",
+        "status": "ok",
+        "usage": {"input_tokens": 12, "output_tokens": 3},
+        "attempt_log": [{"attempt": 1, "status": "ok"}],
+    }
+
+    merged = merge_observation_records(prior, current)
+
+    assert merged["status"] == "ok"
+    assert merged["usage"] == {"input_tokens": 22, "output_tokens": 5}
+    assert merged["attempts"] == 2
+    assert merged["errors"] == ["first run failed"]

@@ -14,7 +14,7 @@ from votecastbench.provenance import (
     inference_config,
     provenance_fields,
 )
-from votecastbench.runner import prompt_hash
+from votecastbench.runner import merge_observation_records, prompt_hash
 
 
 def enrich_record(
@@ -63,8 +63,10 @@ def pool_records(
                 )
             cell_ids[cell] = observation
             prior = by_observation.get(observation)
-            if prior is None or (prior.get("status") != "ok" and row.get("status") == "ok"):
+            if prior is None:
                 by_observation[observation] = row
+            else:
+                by_observation[observation] = merge_observation_records(prior, row)
     return sorted(
         by_observation.values(),
         key=lambda row: (row["model"], row["output_format"], row["question_id"]),
