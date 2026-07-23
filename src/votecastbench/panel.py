@@ -87,6 +87,7 @@ def build_panel_manifest(
     *,
     output_format: str = "winner_only",
     additional_historical_cost_usd: float = 0.0,
+    additional_costs_usd: dict[str, float] | None = None,
     budget_reference_usd: float = 50.0,
 ) -> dict[str, Any]:
     question_ids = [str(row["question_id"]) for row in questions]
@@ -128,7 +129,11 @@ def build_panel_manifest(
         token_usage[model_id]["input_tokens"] += int(usage.get("input_tokens", 0))
         token_usage[model_id]["output_tokens"] += int(usage.get("output_tokens", 0))
     panel_cost = sum(model_costs.values())
-    cumulative_cost = panel_cost + additional_historical_cost_usd
+    additional_costs = dict(additional_costs_usd or {})
+    if additional_historical_cost_usd:
+        additional_costs["historical_non_panel_calls"] = additional_historical_cost_usd
+    additional_cost_total = sum(additional_costs.values())
+    cumulative_cost = panel_cost + additional_cost_total
     return {
         "benchmark_id": BENCHMARK_ID,
         "benchmark_version": BENCHMARK_VERSION,
@@ -151,7 +156,10 @@ def build_panel_manifest(
             for model_id in model_ids
         },
         "panel_estimated_cost_usd": round(panel_cost, 6),
-        "additional_historical_cost_usd": round(additional_historical_cost_usd, 6),
+        "additional_costs_usd": {
+            label: round(cost, 6) for label, cost in sorted(additional_costs.items())
+        },
+        "additional_cost_total_usd": round(additional_cost_total, 6),
         "cumulative_estimated_cost_usd": round(cumulative_cost, 6),
         "budget_reference_usd": budget_reference_usd,
         "within_budget_reference": cumulative_cost <= budget_reference_usd,

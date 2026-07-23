@@ -65,6 +65,12 @@ def _parser() -> argparse.ArgumentParser:
     panel.add_argument("--output", type=Path, required=True)
     panel.add_argument("--format", choices=["winner_only", "joint"], default="winner_only")
     panel.add_argument("--additional-historical-cost-usd", type=float, default=0.0)
+    panel.add_argument(
+        "--additional-cost",
+        action="append",
+        default=[],
+        metavar="LABEL=USD",
+    )
     panel.add_argument("--budget-reference-usd", type=float, default=50.0)
     return parser
 
@@ -131,12 +137,19 @@ def main() -> None:
         print(f"pooled {len(rows)} observations into {args.output}")
         return
     if args.command == "panel-report":
+        additional_costs = {}
+        for item in args.additional_cost:
+            label, separator, amount = item.partition("=")
+            if not separator or not label:
+                raise ValueError("--additional-cost must be LABEL=USD")
+            additional_costs[label] = float(amount)
         manifest = build_panel_manifest(
             read_jsonl(args.questions),
             read_json(args.models),
             read_jsonl(args.predictions),
             output_format=args.format,
             additional_historical_cost_usd=args.additional_historical_cost_usd,
+            additional_costs_usd=additional_costs,
             budget_reference_usd=args.budget_reference_usd,
         )
         write_json(args.output, manifest)

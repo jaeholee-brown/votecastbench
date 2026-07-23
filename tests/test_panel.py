@@ -51,6 +51,11 @@ def test_cost_and_manifest_coverage() -> None:
         [SPEC],
         [record],
         additional_historical_cost_usd=0.6,
+        additional_costs_usd={"probe": 0.2},
     )
     assert manifest["completed_observations"] == 1
-    assert manifest["cumulative_estimated_cost_usd"] == 1.0
+    assert manifest["additional_costs_usd"] == {
+        "historical_non_panel_calls": 0.6,
+        "probe": 0.2,
+    }
+    assert manifest["cumulative_estimated_cost_usd"] == 1.2
