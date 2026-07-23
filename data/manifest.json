@@ -1,0 +1,279 @@
+{
+  "api_base_url": "https://candidates.democracyclub.org.uk/api/next",
+  "dataset": "VoteCastBench UK Local v1",
+  "forecast_as_of": "2026-05-01T23:59:59+01:00",
+  "generated_at": "2026-07-23T08:02:55.461454+00:00",
+  "license_note": "Candidate data is derived from Democracy Club. Check upstream field-level licensing and the linked source records before redistribution beyond this benchmark.",
+  "question_count": 20,
+  "resolution_date": "2026-05-07",
+  "selection": {
+    "ballot_paper_ids": [
+      "local.adur.buckingham.2026-05-07",
+      "local.cherwell.deddington.2026-05-07",
+      "local.exeter.mincinglake-whipton.2026-05-07",
+      "local.norwich.bowthorpe.2026-05-07",
+      "local.welwyn-hatfield.peartree.2026-05-07",
+      "local.rugby.new-bilton.2026-05-07",
+      "local.chorley.chorley-east.2026-05-07",
+      "local.cambridge.west-chesterton.2026-05-07",
+      "local.hartlepool.throston.2026-05-07",
+      "local.leeds.killingbeck-seacroft.2026-05-07",
+      "local.basingstoke-and-deane.winklebury-manydown.2026-05-07",
+      "local.plymouth.sutton-and-mount-gould.2026-05-07",
+      "local.sheffield.crookes-crosspool.2026-05-07",
+      "local.salford.eccles.2026-05-07",
+      "local.city-of-lincoln.moorland.2026-05-07",
+      "local.portsmouth.fratton.2026-05-07",
+      "local.pendle.brierfield-east-clover-hill.2026-05-07",
+      "local.winchester.central-meon-valley.2026-05-07",
+      "local.watford.holywell.2026-05-07",
+      "local.colchester.prettygate.2026-05-07"
+    ],
+    "criteria": [
+      "resolved after 2026-02-16",
+      "single-seat first-past-the-post",
+      "three to six candidates",
+      "complete candidate vote totals and a unique winner",
+      "usable exact-post history and/or candidate electoral history",
+      "variation in geography, winner party, and competitiveness"
+    ],
+    "design": "hand-selected stratified sample"
+  },
+  "sources": [
+    {
+      "election_date": "2021-05-06",
+      "query": [
+        [
+          "election_date",
+          "2021-05-06"
+        ],
+        [
+          "election_id",
+          "^local.*"
+        ],
+        [
+          "format",
+          "csv"
+        ],
+        [
+          "field_group",
+          "results"
+        ],
+        [
+          "field_group",
+          "person"
+        ],
+        [
+          "field_group",
+          "candidacy"
+        ],
+        [
+          "field_group",
+          "election"
+        ],
+        [
+          "results",
+          "True"
+        ]
+      ],
+      "sha256": "da40081689239ab1b54c5135cc23e0c0f9f9974eb96597be3ac7176d51dcb35f",
+      "url": "https://candidates.democracyclub.org.uk/data/export_csv/"
+    },
+    {
+      "election_date": "2022-05-05",
+      "query": [
+        [
+          "election_date",
+          "2022-05-05"
+        ],
+        [
+          "election_id",
+          "^local.*"
+        ],
+        [
+          "format",
+          "csv"
+        ],
+        [
+          "field_group",
+          "results"
+        ],
+        [
+          "field_group",
+          "person"
+        ],
+        [
+          "field_group",
+          "candidacy"
+        ],
+        [
+          "field_group",
+          "election"
+        ],
+        [
+          "results",
+          "True"
+        ]
+      ],
+      "sha256": "9fd876957e473a09d9d9845f832c9780eb1f535fa65b8465098078684678e2c1",
+      "url": "https://candidates.democracyclub.org.uk/data/export_csv/"
+    },
+    {
+      "election_date": "2023-05-04",
+      "query": [
+        [
+          "election_date",
+          "2023-05-04"
+        ],
+        [
+          "election_id",
+          "^local.*"
+        ],
+        [
+          "format",
+          "csv"
+        ],
+        [
+          "field_group",
+          "results"
+        ],
+        [
+          "field_group",
+          "person"
+        ],
+        [
+          "field_group",
+          "candidacy"
+        ],
+        [
+          "field_group",
+          "election"
+        ],
+        [
+          "results",
+          "True"
+        ]
+      ],
+      "sha256": "1664b327bc15f0050f96370ca4ed452a6b2d75fd52c6eb8e09ab9f74826de12a",
+      "url": "https://candidates.democracyclub.org.uk/data/export_csv/"
+    },
+    {
+      "election_date": "2024-05-02",
+      "query": [
+        [
+          "election_date",
+          "2024-05-02"
+        ],
+        [
+          "election_id",
+          "^local.*"
+        ],
+        [
+          "format",
+          "csv"
+        ],
+        [
+          "field_group",
+          "results"
+        ],
+        [
+          "field_group",
+          "person"
+        ],
+        [
+          "field_group",
+          "candidacy"
+        ],
+        [
+          "field_group",
+          "election"
+        ],
+        [
+          "results",
+          "True"
+        ]
+      ],
+      "sha256": "810be45dea6aec7c5ab863b2f5e836d35f6ca084dc8f9d9d7b5471fddf2bdc04",
+      "url": "https://candidates.democracyclub.org.uk/data/export_csv/"
+    },
+    {
+      "election_date": "2025-05-01",
+      "query": [
+        [
+          "election_date",
+          "2025-05-01"
+        ],
+        [
+          "election_id",
+          "^local.*"
+        ],
+        [
+          "format",
+          "csv"
+        ],
+        [
+          "field_group",
+          "results"
+        ],
+        [
+          "field_group",
+          "person"
+        ],
+        [
+          "field_group",
+          "candidacy"
+        ],
+        [
+          "field_group",
+          "election"
+        ],
+        [
+          "results",
+          "True"
+        ]
+      ],
+      "sha256": "c4b9fa549fb88e50ad0cc9a19af725bc2a431c77171b31908072cfd292ffec80",
+      "url": "https://candidates.democracyclub.org.uk/data/export_csv/"
+    },
+    {
+      "election_date": "2026-05-07",
+      "query": [
+        [
+          "election_date",
+          "2026-05-07"
+        ],
+        [
+          "election_id",
+          "^local.*"
+        ],
+        [
+          "format",
+          "csv"
+        ],
+        [
+          "field_group",
+          "results"
+        ],
+        [
+          "field_group",
+          "person"
+        ],
+        [
+          "field_group",
+          "candidacy"
+        ],
+        [
+          "field_group",
+          "election"
+        ],
+        [
+          "results",
+          "True"
+        ]
+      ],
+      "sha256": "fde41ceb3886d42d88f8e7e3d15cc9c5356d802e39135c1c7bbcd51b7ad9816d",
+      "url": "https://candidates.democracyclub.org.uk/data/export_csv/"
+    }
+  ],
+  "version": "1.0.0"
+}
