@@ -7,7 +7,12 @@ import argparse
 from pathlib import Path
 
 from votecastbench.io import write_json
-from votecastbench.uncertainty import bootstrap_report, load_brier_matrix
+from votecastbench.uncertainty import (
+    bootstrap_report,
+    load_brier_matrix,
+    load_metric_matrix,
+    load_organisation_ids,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -16,10 +21,15 @@ def parse_args() -> argparse.Namespace:
         "--scores",
         type=Path,
         action="append",
-        default=[
-            Path("results/panel/scores.json"),
-            Path("results/baselines/scores.json"),
-        ],
+        default=None,
+    )
+    parser.add_argument(
+        "--questions",
+        type=Path,
+        help=(
+            "Question JSONL used to resample by election.organisation. "
+            "If omitted, resample individual questions."
+        ),
     )
     parser.add_argument(
         "--output",
@@ -33,13 +43,28 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    model_ids, question_ids, matrix = load_brier_matrix(args.scores)
+    score_paths = args.scores or [
+        Path("results/panel/scores.json"),
+        Path("results/baselines/scores.json"),
+    ]
+    model_ids, question_ids, matrix = load_brier_matrix(score_paths)
+    accuracy_model_ids, accuracy_question_ids, accuracy_matrix = load_metric_matrix(
+        score_paths,
+        "top_choice_accuracy",
+    )
+    if (accuracy_model_ids, accuracy_question_ids) != (model_ids, question_ids):
+        raise ValueError("accuracy scores do not align with Brier scores")
+    organisation_ids = (
+        load_organisation_ids(args.questions, question_ids) if args.questions else None
+    )
     report = bootstrap_report(
         model_ids,
         question_ids,
         matrix,
         replicates=args.replicates,
         seed=args.seed,
+        organisation_ids=organisation_ids,
+        accuracy_matrix=accuracy_matrix,
     )
     write_json(args.output, report)
 
