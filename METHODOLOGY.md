@@ -4,8 +4,8 @@
 
 Each question is one contested, single-seat, first-past-the-post ward election
 held on 7 May 2026. The forecast timestamp is
-`2026-05-01T23:59:59+01:00`. All 20 outcomes therefore resolved after the most
-recent tested model cutoff, GPT-5.6 Luna's 16 February 2026 cutoff.
+`2026-05-01T23:59:59+01:00`. All target outcomes therefore resolved after the
+most recent tested model cutoff, GPT-5.6 Luna's 16 February 2026 cutoff.
 
 The 20 cases were hand-selected from eligible Democracy Club records to vary:
 
@@ -17,6 +17,16 @@ The 20 cases were hand-selected from eligible Democracy Club records to vary:
 The final set covers 20 councils, eight regions, 108 candidates, and seven
 winner-party labels. This is a purposive pilot sample, not a random or
 population-representative sample.
+
+The primary expansion is a separate set of 500 fresh questions with zero
+overlap with the pilot. From 1,606 preliminarily eligible ballots, it uses the
+published seed `votecastbench-uk-local-500-v1` to select five by-elections and
+495 regular contests across 95 authorities. Regular contests are capped at
+five per authority plus seeded sixth slots, then ordered by seeded ballot
+hashes within each authority. Winner identity, winner party, margin, turnout,
+and vote values are not used for selection; outcome values are inspected only
+to require a complete, uniquely resolvable label. The set covers nine regions
+and 2,491 candidates.
 
 ## Information shown to models
 
@@ -51,8 +61,12 @@ that:
 5. every label has the same candidate set as its question and the labelled
    winner has the highest vote total.
 
-The raw source hashes and selected ballot IDs are recorded in
-`data/manifest.json`.
+The original raw source hashes and selected ballot IDs are recorded in
+`data/manifest.json`. Expansion selection, hashes, API lineage, and a
+deterministic five-case manual audit are in `data/expansion/`. Its automated
+gate reconciles all 1,306 ward-history records and 2,736 candidate-history
+records to hashed exports, verifies 500 API cache records, and scans all 500
+rendered prompts for target-only fields and result URLs.
 
 ### Reconstruction limitation
 
@@ -104,12 +118,13 @@ wider discrepancies are invalid. All committed API forecasts passed validation.
 
 ### Uncertainty
 
-The reported error bars use 100,000 nonparametric bootstrap resamples of the 20
-questions with a fixed seed. Resampling is paired: every forecaster is evaluated
-on the same sampled question indices in each replicate. The repository reports
-percentile 95% intervals for mean Brier, model-rank distributions, probability
-of being the best API model, probability of beating the last-ward baseline, and
-paired Brier differences versus GPT-5.6 Luna.
+The fresh-panel error bars use 100,000 paired nonparametric bootstrap resamples
+of the 95 sampled organisations with a fixed seed. Each sampled organisation
+contributes all of its questions. The repository reports percentile 95%
+intervals for mean Brier and top-choice accuracy, model-rank distributions,
+probability of being the best API model, probability of beating the last-ward
+baseline, and paired Brier differences. The original pilot retains its
+question-level bootstrap.
 
 These intervals measure sensitivity to the included questions only. They do not
 include model sampling variance because each model/question cell has one API
@@ -143,20 +158,26 @@ Sonnet 4.5 does not support adaptive effort and instead used a 10,000-token
 manual thinking budget. Model documentation and run-date token prices are
 recorded in `configs/models.json`.
 
-The expansion wave used async concurrency 128 with up to three attempts.
-Twelve calls that encountered Anthropic's grammar-compilation limit were
-resumed at concurrency 12; completed cells were not repeated. The runner
+The fresh wave used independent append-only shards: eight OpenAI models at
+async concurrency 128, two prompt-only Anthropic models at 64, and two
+structured Sonnet models at 64. The structured adapter omits
+question-specific candidate-ID enums from Anthropic's native grammar so one
+portable grammar can be reused, while the prompt still supplies exact IDs and
+local validation still enforces them. The runner
 records requested and resolved model IDs, response IDs, usage, latency,
 timestamps, prompt hashes, question hashes, full inference-configuration
 hashes, stable observation IDs, and validated forecast objects. It does not
 store credentials or hidden chain-of-thought.
 
-`results/panel/predictions.jsonl` is append-safe: adding questions and rerunning
-all configured models schedules only missing observation IDs. The accompanying
-manifest records all expected cells, missing or failed cells, per-model token
-usage and price estimates, and cumulative non-panel costs.
+`results/fresh-500/shards/` preserves the independently resumable provider
+lanes, and `results/fresh-500/predictions.jsonl` is the pooled 6,000-cell panel.
+Adding questions and rerunning a shard schedules only missing observation IDs.
+The runner and pooler retain billable usage from invalid and resumed attempts
+without double-counting identical records. The manifest records coverage,
+attempt counts, per-model token usage and price estimates, and cumulative
+non-panel costs.
 
-This pilot uses one stochastic call per question/model/format. Replicated runs
+The panels use one stochastic call per question/model/format. Replicated runs
 would be needed to quantify sampling variance.
 
 ## Baselines
@@ -167,4 +188,5 @@ would be needed to quantify sampling variance.
 same-post result, maps Labour and Labour & Co-operative to one party family,
 and adds smoothing equal to 1% of the prior valid-vote total to every current
 candidate before normalization. It uses no candidate identity or profile
-information.
+information. For 22 of the fresh 500 packets with no same-ward history, it uses
+the uniform forecast as an explicit fallback.

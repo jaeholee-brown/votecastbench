@@ -1,10 +1,11 @@
 # VoteCastBench
 
-VoteCastBench is a small, auditable benchmark for forecasting UK elections
-that resolved after the tested models' knowledge cutoffs. Version 1 contains
-20 single-winner English local-election questions from 7 May 2026, with
-standardized candidate profiles and local electoral history frozen to a
-1 May 2026 forecast timestamp.
+VoteCastBench is an auditable benchmark for forecasting UK elections that
+resolved after the tested models' knowledge cutoffs. Its primary evaluation is
+an outcome-blind sample of 500 single-winner English local-election questions
+from 7 May 2026, excluding every case in the original 20-question pilot.
+Candidate profiles and local electoral history are frozen to a 1 May 2026
+forecast timestamp.
 
 The primary task asks only for calibrated winner probabilities and an
 unrestricted-length rationale. A paired ablation found that additionally
@@ -14,30 +15,22 @@ so those targets are retained only as an exploratory secondary track.
 ## Headline results
 
 Lower Brier score is better. Each API model made one high-effort forecast for
-each of the 20 questions. The 240-call panel is complete.
+each of the 500 fresh questions. The 6,000-cell panel is complete.
 
-The rows are ordered by point estimate, not presented as a statistically
-resolved ranking. Intervals are 95% paired question-bootstrap intervals.
+Intervals are 95% paired bootstrap intervals over the 95 sampled councils.
 
-| Forecaster | Inference setting | Brier (95% interval) | Top-choice accuracy |
-|---|---|---:|---:|
-| GPT-5.6 Luna | high | **0.5306** [0.3486, 0.7393] | **70%** |
-| GPT-5.6 Terra | high | 0.5418 [0.3608, 0.7401] | 65% |
-| Claude Sonnet 4.6 | adaptive max | 0.5660 [0.3997, 0.7500] | 60% |
-| Claude Sonnet 4.5 | 10k thinking | 0.5692 [0.3780, 0.7817] | 60% |
-| GPT-5.6 Sol | high | 0.5720 [0.3534, 0.8241] | **70%** |
-| GPT-5.5 | high | 0.5740 [0.3605, 0.8191] | 65% |
-| Claude Sonnet 5 | adaptive xhigh | 0.5769 [0.4143, 0.7669] | 67.5% |
-| Claude Haiku 4.5 | 4,096 thinking | 0.5962 [0.3836, 0.8271] | 65% |
-| Last-ward party-share baseline | deterministic | 0.6056 [0.4690, 0.7568] | 65% |
-| GPT-5.4 | high | 0.6230 [0.3905, 0.8836] | 60% |
-| GPT-5.2 | high | 0.6295 [0.4254, 0.8581] | 65% |
-| GPT-5.4 nano | high | 0.6325 [0.4198, 0.8735] | 60% |
-| GPT-5.4 mini | high | 0.6507 [0.4453, 0.8826] | 65% |
-| Uniform baseline | deterministic | 0.8133 [0.8067, 0.8200] | 18.7% |
+| Forecaster | Brier (95% interval) | Accuracy (95% interval) |
+|---|---:|---:|
+| Claude Sonnet 5, adaptive xhigh | **0.5918** [0.5479, 0.6365] | **56.4%** [50.9%, 61.9%] |
+| Claude Sonnet 4.6, adaptive max | 0.6073 [0.5524, 0.6627] | 54.0% [48.1%, 59.9%] |
+| GPT-5.6 Terra, high | 0.6718 [0.6030, 0.7413] | 49.8% [43.7%, 56.0%] |
+| GPT-5.5, high | 0.7032 [0.6276, 0.7799] | 49.2% [43.4%, 55.0%] |
+| GPT-5.6 Sol, high | 0.7104 [0.6322, 0.7898] | 49.0% [43.0%, 55.0%] |
 
-See [RESULTS.md](RESULTS.md) for the output-format ablation, token use, and
-interpretation. This is a 20-question pilot, not a definitive model ranking.
+See [the complete 14-row table](results/fresh-500/RESULTS.md) and
+[RESULTS.md](RESULTS.md) for costs, uncertainty, the original pilot, and the
+output-format ablation. Sonnet 5 ranked first in 91.3% of council-bootstrap
+resamples, but its paired Brier difference from Sonnet 4.6 still included zero.
 
 ## Reproduce
 
@@ -94,14 +87,20 @@ Rebuild the curated data from Democracy Club:
 
 ```bash
 uv run python scripts/curate.py
+uv run python scripts/curate_expansion.py select
+uv run python scripts/curate_expansion.py fetch-ballots
+uv run python scripts/curate_expansion.py curate
+uv run python scripts/audit_expansion.py
 ```
 
 ## Repository map
 
 - `data/questions.jsonl`: model-visible forecast packets
 - `data/labels.jsonl`: resolved outcomes, withheld during forecasting
+- `data/expansion/`: fresh questions, labels, selection, lineage, and audit
 - `configs/models.json`: provider IDs, high-effort settings, cutoffs, and prices
 - `src/votecastbench/`: validation, prompting, async runners, and scoring
+- `results/fresh-500/`: 6,000 forecasts, scores, uncertainty, costs, and shards
 - `results/panel/`: pooled predictions, scores, uncertainty, coverage, and costs
 - `results/full/`: original four-model result set retained for provenance
 - `METHODOLOGY.md`: curation, leakage controls, and metric definitions
@@ -112,7 +111,7 @@ The dataset is derived from
 [Democracy Club candidate data](https://democracyclub.org.uk/data_apis/data/)
 and its [candidate API](https://candidates.democracyclub.org.uk/api/docs/next/).
 The forecast packets are post-election reconstructions: timestamps are used to
-exclude late statements and profile edits, but this pilot is not a
+exclude late statements and profile edits, but this benchmark is not a
 cryptographically archived pre-election snapshot. Read the limitations in
 [METHODOLOGY.md](METHODOLOGY.md) before treating it as a contamination-proof
 evaluation.

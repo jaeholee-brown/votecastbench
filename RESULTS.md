@@ -1,6 +1,44 @@
 # Results
 
-## Protected winner-only benchmark
+## Fresh outcome-blind 500-question panel
+
+All 6,000 API forecasts completed and passed validation. Brackets are paired
+95% organisation-cluster bootstrap intervals over 95 councils. The complete
+machine-rendered table is preserved in
+[`results/fresh-500/RESULTS.md`](results/fresh-500/RESULTS.md).
+
+| Rank | Forecaster | Brier [95% CI] | Accuracy [95% CI] | Est. cost |
+|---:|---|---:|---:|---:|
+| 1 | Claude Sonnet 5, adaptive xhigh | **0.5918** [0.5479, 0.6365] | **56.4%** [50.9%, 61.9%] | $26.21 |
+| 2 | Claude Sonnet 4.6, adaptive max | 0.6073 [0.5524, 0.6627] | 54.0% [48.1%, 59.9%] | $33.05 |
+| 3 | GPT-5.6 Terra, high | 0.6718 [0.6030, 0.7413] | 49.8% [43.7%, 56.0%] | $8.26 |
+| 4 | GPT-5.5, high | 0.7032 [0.6276, 0.7799] | 49.2% [43.4%, 55.0%] | $59.02 |
+| 5 | GPT-5.6 Sol, high | 0.7104 [0.6322, 0.7898] | 49.0% [43.0%, 55.0%] | $25.93 |
+| 6 | GPT-5.6 Luna, high | 0.7201 [0.6473, 0.7937] | 48.8% [42.6%, 55.0%] | $4.51 |
+| 7 | GPT-5.4 mini, high | 0.7268 [0.6557, 0.7986] | 46.0% [39.9%, 52.1%] | $13.64 |
+| 8 | Claude Sonnet 4.5, 10k thinking | 0.7274 [0.6567, 0.7983] | 45.9% [40.0%, 51.9%] | $21.50 |
+| 9 | GPT-5.2, high | 0.7424 [0.6674, 0.8181] | 46.0% [40.0%, 52.1%] | $10.76 |
+| 10 | Claude Haiku 4.5, 4,096 thinking | 0.7596 [0.6843, 0.8347] | 47.4% [41.4%, 53.5%] | $7.62 |
+| 11 | GPT-5.4, high | 0.7635 [0.6777, 0.8496] | 46.4% [40.2%, 52.7%] | $33.88 |
+| 12 | GPT-5.4 nano, high | 0.7834 [0.7059, 0.8609] | 47.3% [41.2%, 53.4%] | $1.41 |
+| 13 | Uniform baseline | 0.7945 [0.7888, 0.7996] | 20.6% [20.0%, 21.1%] | — |
+| 14 | Last-ward party-share baseline | 0.8204 [0.7546, 0.8869] | 43.4% [37.3%, 49.6%] | — |
+
+Sonnet 5 was the best API model in 91.3% of bootstrap resamples. Its paired
+Brier advantage over Sonnet 4.6 was 0.0155, with a 95% interval from -0.0067 to
+0.0386, so the top two are not separated at the 95% level. GPT-5.6 Terra's
+paired deficit versus Sonnet 5 was 0.0800 [0.0460, 0.1155].
+
+The fresh panel cost an estimated **$245.78**. Including the prior pilot,
+ablation, and probes, cumulative estimated model-API spend is **$258.78**.
+There were 6,009 attempts for 6,000 successful observations; all nine retried
+cells retain attempt-level usage in the committed records.
+
+Vote-share MAE is not reported for this protected panel because it requested
+winner probabilities only. Winner probabilities are not treated as vote
+shares.
+
+## Original 20-question protected winner-only pilot
 
 All 240 API forecasts completed and passed output validation. Lower Brier is
 better. Rows are ordered by point estimate only; they are not a statistically
