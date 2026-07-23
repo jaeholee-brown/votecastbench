@@ -1,0 +1,271 @@
+{
+  "forecasters": [
+    {
+      "api_rank_95_interval": [
+        1,
+        7
+      ],
+      "brier_95_interval": [
+        0.3486301246005709,
+        0.7393313958230913
+      ],
+      "brier_delta_vs_luna": 0.0,
+      "brier_delta_vs_luna_95_interval": [
+        0.0,
+        0.0
+      ],
+      "mean_api_rank": 2.29449,
+      "mean_brier_score": 0.5306162329236626,
+      "model": "openai/gpt-5.6-luna",
+      "probability_beats_last_ward_baseline": 0.87063,
+      "probability_best_api_model": 0.48335
+    },
+    {
+      "api_rank_95_interval": [
+        1,
+        6
+      ],
+      "brier_95_interval": [
+        0.36083153999999995,
+        0.7401354975
+      ],
+      "brier_delta_vs_luna": 0.011154067076337492,
+      "brier_delta_vs_luna_95_interval": [
+        -0.0627964500242336,
+        0.087427895399429
+      ],
+      "mean_api_rank": 2.75928,
+      "mean_brier_score": 0.5417703,
+      "model": "openai/gpt-5.6-terra",
+      "probability_beats_last_ward_baseline": 0.88079,
+      "probability_best_api_model": 0.24925
+    },
+    {
+      "api_rank_95_interval": [
+        1,
+        11
+      ],
+      "brier_95_interval": [
+        0.399728665,
+        0.7500063475000001
+      ],
+      "brier_delta_vs_luna": 0.035420667076337495,
+      "brier_delta_vs_luna_95_interval": [
+        -0.027826474146183097,
+        0.09107670249999994
+      ],
+      "mean_api_rank": 4.94802,
+      "mean_brier_score": 0.5660369000000001,
+      "model": "anthropic/claude-sonnet-4-6-max",
+      "probability_beats_last_ward_baseline": 0.76336,
+      "probability_best_api_model": 0.04865
+    },
+    {
+      "api_rank_95_interval": [
+        1,
+        10
+      ],
+      "brier_95_interval": [
+        0.37802706062499997,
+        0.78170495125
+      ],
+      "brier_delta_vs_luna": 0.038584492076337504,
+      "brier_delta_vs_luna_95_interval": [
+        -0.05718301292366249,
+        0.14167881207633753
+      ],
+      "mean_api_rank": 4.93665,
+      "mean_brier_score": 0.569200725,
+      "model": "anthropic/claude-sonnet-4-5-thinking-10k",
+      "probability_beats_last_ward_baseline": 0.7829,
+      "probability_best_api_model": 0.09705
+    },
+    {
+      "api_rank_95_interval": [
+        1,
+        11
+      ],
+      "brier_95_interval": [
+        0.3534409639,
+        0.8241253628999997
+      ],
+      "brier_delta_vs_luna": 0.04135919607633747,
+      "brier_delta_vs_luna_95_interval": [
+        -0.030646080649233423,
+        0.11813671910190839
+      ],
+      "mean_api_rank": 5.38714,
+      "mean_brier_score": 0.571975429,
+      "model": "openai/gpt-5.6-sol",
+      "probability_beats_last_ward_baseline": 0.67989,
+      "probability_best_api_model": 0.05147
+    },
+    {
+      "api_rank_95_interval": [
+        1,
+        9
+      ],
+      "brier_95_interval": [
+        0.36050340625000005,
+        0.8190784156249997
+      ],
+      "brier_delta_vs_luna": 0.04337149207633752,
+      "brier_delta_vs_luna_95_interval": [
+        -0.029098203121754023,
+        0.13838974980190835
+      ],
+      "mean_api_rank": 5.24818,
+      "mean_brier_score": 0.5739877250000001,
+      "model": "openai/gpt-5.5",
+      "probability_beats_last_ward_baseline": 0.68277,
+      "probability_best_api_model": 0.03057
+    },
+    {
+      "api_rank_95_interval": [
+        2,
+        11
+      ],
+      "brier_95_interval": [
+        0.41432243750000003,
+        0.7669474324999999
+      ],
+      "brier_delta_vs_luna": 0.046278167076337515,
+      "brier_delta_vs_luna_95_interval": [
+        -0.015008327499999868,
+        0.1069167212839712
+      ],
+      "mean_api_rank": 6.03165,
+      "mean_brier_score": 0.5768944,
+      "model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 0.72755,
+      "probability_best_api_model": 0.00464
+    },
+    {
+      "api_rank_95_interval": [
+        1,
+        12
+      ],
+      "brier_95_interval": [
+        0.38359144732501715,
+        0.8271276373250169
+      ],
+      "brier_delta_vs_luna": 0.06561097422269571,
+      "brier_delta_vs_luna_95_interval": [
+        -0.02932879856160337,
+        0.17448069464635815
+      ],
+      "mean_api_rank": 7.00907,
+      "mean_brier_score": 0.5962272071463582,
+      "model": "anthropic/claude-haiku-4-5",
+      "probability_beats_last_ward_baseline": 0.56713,
+      "probability_best_api_model": 0.02711
+    },
+    {
+      "brier_95_interval": [
+        0.4690234590734948,
+        0.7567743729032144
+      ],
+      "mean_brier_score": 0.6055595797782574,
+      "model": "baseline/last-ward-party-share"
+    },
+    {
+      "api_rank_95_interval": [
+        3,
+        12
+      ],
+      "brier_95_interval": [
+        0.39048426750000004,
+        0.883617394375
+      ],
+      "brier_delta_vs_luna": 0.09237314207633747,
+      "brier_delta_vs_luna_95_interval": [
+        -0.014716169399233536,
+        0.22046918457633738
+      ],
+      "mean_api_rank": 8.97554,
+      "mean_brier_score": 0.622989375,
+      "model": "openai/gpt-5.4",
+      "probability_beats_last_ward_baseline": 0.41577,
+      "probability_best_api_model": 0.00509
+    },
+    {
+      "api_rank_95_interval": [
+        7,
+        12
+      ],
+      "brier_95_interval": [
+        0.42540222999999994,
+        0.85814561875
+      ],
+      "brier_delta_vs_luna": 0.09891109207633747,
+      "brier_delta_vs_luna_95_interval": [
+        0.011633713951337544,
+        0.1998074249999999
+      ],
+      "mean_api_rank": 9.80923,
+      "mean_brier_score": 0.629527325,
+      "model": "openai/gpt-5.2",
+      "probability_beats_last_ward_baseline": 0.34365,
+      "probability_best_api_model": 0.0
+    },
+    {
+      "api_rank_95_interval": [
+        5,
+        12
+      ],
+      "brier_95_interval": [
+        0.4197933825,
+        0.8735154949999999
+      ],
+      "brier_delta_vs_luna": 0.10192236707633748,
+      "brier_delta_vs_luna_95_interval": [
+        0.004753139975766489,
+        0.2174352853994291
+      ],
+      "mean_api_rank": 9.85719,
+      "mean_brier_score": 0.6325386,
+      "model": "openai/gpt-5.4-nano",
+      "probability_beats_last_ward_baseline": 0.34433,
+      "probability_best_api_model": 0.00113
+    },
+    {
+      "api_rank_95_interval": [
+        6,
+        12
+      ],
+      "brier_95_interval": [
+        0.44528468750000005,
+        0.882625145
+      ],
+      "brier_delta_vs_luna": 0.12009816707633751,
+      "brier_delta_vs_luna_95_interval": [
+        0.002556010798858158,
+        0.25246292667690823
+      ],
+      "mean_api_rank": 10.74356,
+      "mean_brier_score": 0.6507144,
+      "model": "openai/gpt-5.4-mini",
+      "probability_beats_last_ward_baseline": 0.26047,
+      "probability_best_api_model": 0.00169
+    },
+    {
+      "brier_95_interval": [
+        0.8066666666666669,
+        0.8200000000000001
+      ],
+      "mean_brier_score": 0.8133333333333335,
+      "model": "baseline/uniform"
+    }
+  ],
+  "interval": "percentile 95%",
+  "method": "paired nonparametric bootstrap over questions",
+  "notes": [
+    "Every replicate resamples the same question indices for every forecaster.",
+    "Intervals capture question-sampling uncertainty only.",
+    "They do not capture model sampling variance because each cell has one API call.",
+    "The 20 questions are purposively curated rather than an IID random sample."
+  ],
+  "question_count": 20,
+  "replicates": 100000,
+  "seed": 20260723
+}
