@@ -15,6 +15,7 @@ import httpx
 
 from votecastbench.io import read_jsonl, write_jsonl
 from votecastbench.prompting import SYSTEM_PROMPT, build_user_prompt
+from votecastbench.provenance import observation_id, provenance_fields
 from votecastbench.providers import ProviderError, call_provider
 from votecastbench.schemas import OutputFormat, validate_forecast
 
@@ -53,6 +54,8 @@ async def _run_one(
     attempts: int,
 ) -> dict[str, Any]:
     user_prompt = build_user_prompt(question, output_format)
+    digest = prompt_hash(SYSTEM_PROMPT, user_prompt)
+    provenance = provenance_fields(question, spec, output_format, digest)
     started = time.perf_counter()
     errors = []
     for attempt in range(1, attempts + 1):
@@ -76,6 +79,8 @@ async def _run_one(
                 "resolved_model": result.resolved_model,
                 "output_format": output_format,
                 "reasoning_effort": spec.get("reasoning_effort"),
+                "thinking_mode": spec.get("thinking_mode"),
+                "anthropic_effort": spec.get("anthropic_effort"),
                 "thinking_budget_tokens": spec.get("thinking_budget_tokens"),
                 "forecast": forecast,
                 "provider_response_id": result.response_id,
@@ -83,8 +88,9 @@ async def _run_one(
                 "attempts": attempt,
                 "latency_seconds": round(time.perf_counter() - started, 3),
                 "generated_at": datetime.now(UTC).isoformat(),
-                "prompt_sha256": prompt_hash(SYSTEM_PROMPT, user_prompt),
+                "prompt_sha256": digest,
                 "status": "ok",
+                **provenance,
             }
         except (httpx.HTTPError, ProviderError, ValueError, KeyError, TypeError) as exc:
             errors.append(f"{type(exc).__name__}: {exc}")
@@ -98,13 +104,16 @@ async def _run_one(
         "requested_model": spec["model"],
         "output_format": output_format,
         "reasoning_effort": spec.get("reasoning_effort"),
+        "thinking_mode": spec.get("thinking_mode"),
+        "anthropic_effort": spec.get("anthropic_effort"),
         "thinking_budget_tokens": spec.get("thinking_budget_tokens"),
         "attempts": attempts,
         "latency_seconds": round(time.perf_counter() - started, 3),
         "generated_at": datetime.now(UTC).isoformat(),
-        "prompt_sha256": prompt_hash(SYSTEM_PROMPT, user_prompt),
+        "prompt_sha256": digest,
         "status": "error",
         "errors": errors,
+        **provenance,
     }
 
 
@@ -120,16 +129,22 @@ async def run_benchmark(
     output = Path(output_path)
     existing = read_jsonl(output) if output.exists() else []
     completed = {
-        (row["question_id"], row["model"], row["output_format"])
+        row["observation_id"]
         for row in existing
-        if row.get("status") == "ok"
+        if row.get("status") == "ok" and row.get("observation_id")
     }
     jobs = [
         (question, spec, output_format)
         for question in questions
         for spec in specs
         for output_format in output_formats
-        if (question["question_id"], spec["id"], output_format) not in completed
+        if observation_id(
+            question,
+            spec,
+            output_format,
+            prompt_hash(SYSTEM_PROMPT, build_user_prompt(question, output_format)),
+        )
+        not in completed
     ]
     semaphore = asyncio.Semaphore(concurrency)
     limits = httpx.Limits(
@@ -164,7 +179,8 @@ async def run_benchmark(
                 flush=True,
             )
     combined_by_key = {
-        (row["question_id"], row["model"], row["output_format"]): row for row in [*existing, *fresh]
+        row.get("observation_id") or (row["question_id"], row["model"], row["output_format"]): row
+        for row in [*existing, *fresh]
     }
     combined = sorted(
         combined_by_key.values(),

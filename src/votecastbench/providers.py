@@ -111,9 +111,17 @@ async def call_anthropic(
             }
         ],
     }
+    thinking_mode = spec.get("thinking_mode")
     thinking_budget = spec.get("thinking_budget_tokens")
-    if thinking_budget:
+    if thinking_mode == "adaptive":
+        body["thinking"] = {"type": "adaptive"}
+    elif thinking_mode == "manual" or thinking_budget:
         body["thinking"] = {"type": "enabled", "budget_tokens": int(thinking_budget)}
+    if spec.get("structured_output"):
+        output_config: dict[str, Any] = {"format": {"type": "json_schema", "schema": schema}}
+        if spec.get("anthropic_effort"):
+            output_config["effort"] = spec["anthropic_effort"]
+        body["output_config"] = output_config
     response = await client.post(
         "https://api.anthropic.com/v1/messages",
         headers={

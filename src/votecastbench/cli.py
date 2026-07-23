@@ -11,6 +11,7 @@ from typing import Any
 from votecastbench.baselines import baseline_predictions
 from votecastbench.env import load_env_file
 from votecastbench.io import read_json, read_jsonl, write_json, write_jsonl
+from votecastbench.panel import build_panel_manifest, pool_records
 from votecastbench.runner import run_benchmark
 from votecastbench.schemas import OutputFormat
 from votecastbench.scoring import score_runs
@@ -50,6 +51,21 @@ def _parser() -> argparse.ArgumentParser:
     score.add_argument("--labels", type=Path, default=Path("data/labels.jsonl"))
     score.add_argument("--predictions", type=Path, required=True)
     score.add_argument("--output", type=Path, required=True)
+
+    pool = subparsers.add_parser("pool")
+    pool.add_argument("--questions", type=Path, default=Path("data/questions.jsonl"))
+    pool.add_argument("--models", type=Path, default=Path("configs/models.json"))
+    pool.add_argument("--input", action="append", type=Path, required=True, dest="inputs")
+    pool.add_argument("--output", type=Path, required=True)
+
+    panel = subparsers.add_parser("panel-report")
+    panel.add_argument("--questions", type=Path, default=Path("data/questions.jsonl"))
+    panel.add_argument("--models", type=Path, default=Path("configs/models.json"))
+    panel.add_argument("--predictions", type=Path, required=True)
+    panel.add_argument("--output", type=Path, required=True)
+    panel.add_argument("--format", choices=["winner_only", "joint"], default="winner_only")
+    panel.add_argument("--additional-historical-cost-usd", type=float, default=0.0)
+    panel.add_argument("--budget-reference-usd", type=float, default=50.0)
     return parser
 
 
@@ -102,6 +118,29 @@ def main() -> None:
         )
         write_json(args.output, report)
         print(json.dumps(report["groups"], indent=2, sort_keys=True))
+        return
+    if args.command == "pool":
+        questions = read_jsonl(args.questions)
+        specs = read_json(args.models)
+        rows = pool_records(
+            [read_jsonl(path) for path in args.inputs],
+            questions,
+            specs,
+        )
+        write_jsonl(args.output, rows)
+        print(f"pooled {len(rows)} observations into {args.output}")
+        return
+    if args.command == "panel-report":
+        manifest = build_panel_manifest(
+            read_jsonl(args.questions),
+            read_json(args.models),
+            read_jsonl(args.predictions),
+            output_format=args.format,
+            additional_historical_cost_usd=args.additional_historical_cost_usd,
+            budget_reference_usd=args.budget_reference_usd,
+        )
+        write_json(args.output, manifest)
+        print(json.dumps(manifest, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":

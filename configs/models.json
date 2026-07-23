@@ -30,6 +30,56 @@
     "documentation": "https://developers.openai.com/api/docs/models/gpt-5.6-luna"
   },
   {
+    "id": "openai/gpt-5.2",
+    "provider": "openai",
+    "model": "gpt-5.2-2025-12-11",
+    "knowledge_cutoff": "2025-08-31",
+    "reasoning_effort": "high",
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 1.75, "output": 14.0},
+    "documentation": "https://developers.openai.com/api/docs/models/gpt-5.2"
+  },
+  {
+    "id": "openai/gpt-5.4",
+    "provider": "openai",
+    "model": "gpt-5.4-2026-03-05",
+    "knowledge_cutoff": "2025-08-31",
+    "reasoning_effort": "high",
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 2.5, "output": 15.0},
+    "documentation": "https://developers.openai.com/api/docs/models/gpt-5.4"
+  },
+  {
+    "id": "openai/gpt-5.5",
+    "provider": "openai",
+    "model": "gpt-5.5-2026-04-23",
+    "knowledge_cutoff": "2025-12-01",
+    "reasoning_effort": "high",
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 5.0, "output": 30.0},
+    "documentation": "https://developers.openai.com/api/docs/models/gpt-5.5"
+  },
+  {
+    "id": "openai/gpt-5.6-terra",
+    "provider": "openai",
+    "model": "gpt-5.6-terra",
+    "knowledge_cutoff": "2026-02-16",
+    "reasoning_effort": "high",
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 2.5, "output": 15.0},
+    "documentation": "https://developers.openai.com/api/docs/models/gpt-5.6-terra"
+  },
+  {
+    "id": "openai/gpt-5.6-sol",
+    "provider": "openai",
+    "model": "gpt-5.6-sol",
+    "knowledge_cutoff": "2026-02-16",
+    "reasoning_effort": "high",
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 5.0, "output": 30.0},
+    "documentation": "https://developers.openai.com/api/docs/models/gpt-5.6-sol"
+  },
+  {
     "id": "anthropic/claude-haiku-4-5",
     "provider": "anthropic",
     "model": "claude-haiku-4-5-20251001",
@@ -38,6 +88,45 @@
     "thinking_budget_tokens": 4096,
     "max_output_tokens": 12000,
     "pricing_usd_per_million_tokens": {"input": 1.0, "output": 5.0},
+    "documentation": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  {
+    "id": "anthropic/claude-sonnet-5-max",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "reliable_knowledge_cutoff": "2026-01-31",
+    "training_data_cutoff": "2026-01-31",
+    "thinking_mode": "adaptive",
+    "anthropic_effort": "max",
+    "structured_output": true,
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 2.0, "output": 10.0},
+    "pricing_note": "Introductory standard-context price through 2026-08-31.",
+    "documentation": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  {
+    "id": "anthropic/claude-sonnet-4-6-max",
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-6",
+    "reliable_knowledge_cutoff": "2025-08-31",
+    "training_data_cutoff": "2026-01-31",
+    "thinking_mode": "adaptive",
+    "anthropic_effort": "max",
+    "structured_output": true,
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 3.0, "output": 15.0},
+    "documentation": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  {
+    "id": "anthropic/claude-sonnet-4-5-thinking-10k",
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-5-20250929",
+    "reliable_knowledge_cutoff": "2025-02-28",
+    "training_data_cutoff": "2025-07-31",
+    "thinking_mode": "manual",
+    "thinking_budget_tokens": 10000,
+    "max_output_tokens": 12000,
+    "pricing_usd_per_million_tokens": {"input": 3.0, "output": 15.0},
     "documentation": "https://platform.claude.com/docs/en/about-claude/models/overview"
   }
 ]
