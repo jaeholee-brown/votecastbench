@@ -1,0 +1,415 @@
+{
+  "forecasters": [
+    {
+      "api_rank_95_interval": [
+        1,
+        2
+      ],
+      "brier_95_interval": [
+        0.547905045229544,
+        0.6364589880625444
+      ],
+      "brier_delta_vs_luna": -0.1283268069247707,
+      "brier_delta_vs_luna_95_interval": [
+        -0.17116453502313153,
+        -0.0865349637766174
+      ],
+      "brier_delta_vs_point_best": 0.0,
+      "brier_delta_vs_point_best_95_interval": [
+        0.0,
+        0.0
+      ],
+      "mean_api_rank": 1.08677,
+      "mean_brier_score": 0.5918230680000001,
+      "mean_top_choice_accuracy": 0.564,
+      "model": "anthropic/claude-sonnet-5-xhigh",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.91323,
+      "top_choice_accuracy_95_interval": [
+        0.5094513500017833,
+        0.618547091521949
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        1,
+        2
+      ],
+      "brier_95_interval": [
+        0.5523703014285715,
+        0.662734022977985
+      ],
+      "brier_delta_vs_luna": -0.11282932692477071,
+      "brier_delta_vs_luna_95_interval": [
+        -0.14196000187669525,
+        -0.08396391798439141
+      ],
+      "brier_delta_vs_point_best": 0.015497479999999952,
+      "brier_delta_vs_point_best_95_interval": [
+        -0.006722812113725512,
+        0.03860508333462478
+      ],
+      "mean_api_rank": 1.91323,
+      "mean_brier_score": 0.607320548,
+      "mean_top_choice_accuracy": 0.54,
+      "model": "anthropic/claude-sonnet-4-6-max",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.08677,
+      "top_choice_accuracy_95_interval": [
+        0.4810756972111554,
+        0.5985477178423236
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        3,
+        3
+      ],
+      "brier_95_interval": [
+        0.6030404975823588,
+        0.7413199961441077
+      ],
+      "brier_delta_vs_luna": -0.04831742988477072,
+      "brier_delta_vs_luna_95_interval": [
+        -0.06930926713468331,
+        -0.027565416536836595
+      ],
+      "brier_delta_vs_point_best": 0.08000937704,
+      "brier_delta_vs_point_best_95_interval": [
+        0.045992237240275395,
+        0.11546429879559593
+      ],
+      "mean_api_rank": 3.00032,
+      "mean_brier_score": 0.6718324450400001,
+      "mean_top_choice_accuracy": 0.498,
+      "model": "openai/gpt-5.6-terra",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.43673469387755104,
+        0.5597609561752988
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        4,
+        5
+      ],
+      "brier_95_interval": [
+        0.6276396653607754,
+        0.779914936116
+      ],
+      "brier_delta_vs_luna": -0.01692063416477072,
+      "brier_delta_vs_luna_95_interval": [
+        -0.03260679147798058,
+        -0.0011258577253448496
+      ],
+      "brier_delta_vs_point_best": 0.11140617275999998,
+      "brier_delta_vs_point_best_95_interval": [
+        0.06948692446138365,
+        0.1546371107720707
+      ],
+      "mean_api_rank": 4.13862,
+      "mean_brier_score": 0.70322924076,
+      "mean_top_choice_accuracy": 0.492,
+      "model": "openai/gpt-5.5",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.43368368942157376,
+        0.5504950495049505
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        4,
+        7
+      ],
+      "brier_95_interval": [
+        0.6322154715586775,
+        0.7897895009276227
+      ],
+      "brier_delta_vs_luna": -0.009723246484770718,
+      "brier_delta_vs_luna_95_interval": [
+        -0.02740887002036625,
+        0.008366077163159747
+      ],
+      "brier_delta_vs_point_best": 0.11860356043999987,
+      "brier_delta_vs_point_best_95_interval": [
+        0.07510640277121361,
+        0.163765109022619
+      ],
+      "mean_api_rank": 5.19894,
+      "mean_brier_score": 0.7104266284399999,
+      "mean_top_choice_accuracy": 0.49,
+      "model": "openai/gpt-5.6-sol",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.42998027613412226,
+        0.5504950495049505
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        5,
+        8
+      ],
+      "brier_95_interval": [
+        0.6472979001369135,
+        0.7936913845482122
+      ],
+      "brier_delta_vs_luna": 0.0,
+      "brier_delta_vs_luna_95_interval": [
+        0.0,
+        0.0
+      ],
+      "brier_delta_vs_point_best": 0.12832680692477072,
+      "brier_delta_vs_point_best_95_interval": [
+        0.08653496377661732,
+        0.17116453502313153
+      ],
+      "mean_api_rank": 6.35096,
+      "mean_brier_score": 0.7201498749247708,
+      "mean_top_choice_accuracy": 0.488,
+      "model": "openai/gpt-5.6-luna",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.4264062624492072,
+        0.55
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        5,
+        9
+      ],
+      "brier_95_interval": [
+        0.6556637507714888,
+        0.7985601621000186
+      ],
+      "brier_delta_vs_luna": 0.006601980075229276,
+      "brier_delta_vs_luna_95_interval": [
+        -0.014400148123431478,
+        0.027923449401159074
+      ],
+      "brier_delta_vs_point_best": 0.13492878699999988,
+      "brier_delta_vs_point_best_95_interval": [
+        0.09305307780761722,
+        0.1775723993399267
+      ],
+      "mean_api_rank": 7.13343,
+      "mean_brier_score": 0.726751855,
+      "mean_top_choice_accuracy": 0.46,
+      "model": "openai/gpt-5.4-mini",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.39919354838709675,
+        0.5209580838323353
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        5,
+        8
+      ],
+      "brier_95_interval": [
+        0.6567338358523602,
+        0.7982523579417178
+      ],
+      "brier_delta_vs_luna": 0.007258599075229282,
+      "brier_delta_vs_luna_95_interval": [
+        -0.012501057035103952,
+        0.026793513085238446
+      ],
+      "brier_delta_vs_point_best": 0.1355854059999999,
+      "brier_delta_vs_point_best_95_interval": [
+        0.09482182516271583,
+        0.17705528898170114
+      ],
+      "mean_api_rank": 7.24268,
+      "mean_brier_score": 0.727408474,
+      "mean_top_choice_accuracy": 0.459,
+      "model": "anthropic/claude-sonnet-4-5-thinking-10k",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.3996138996138996,
+        0.5189620758483033
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        8,
+        10
+      ],
+      "brier_95_interval": [
+        0.6673923544887436,
+        0.8180585192829457
+      ],
+      "brier_delta_vs_luna": 0.02228009307522928,
+      "brier_delta_vs_luna_95_interval": [
+        0.0056813333293711556,
+        0.03881417447916124
+      ],
+      "brier_delta_vs_point_best": 0.1506069,
+      "brier_delta_vs_point_best_95_interval": [
+        0.10741660199600786,
+        0.19452292045048994
+      ],
+      "mean_api_rank": 8.96843,
+      "mean_brier_score": 0.742429968,
+      "mean_top_choice_accuracy": 0.46,
+      "model": "openai/gpt-5.2",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 1.0,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.3996101364522417,
+        0.5210420841683366
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        9,
+        11
+      ],
+      "brier_95_interval": [
+        0.6843376080591903,
+        0.8347427354499043
+      ],
+      "brier_delta_vs_luna": 0.0394104611248456,
+      "brier_delta_vs_luna_95_interval": [
+        0.019516663866918714,
+        0.06049942639801914
+      ],
+      "brier_delta_vs_point_best": 0.1677372680496163,
+      "brier_delta_vs_point_best_95_interval": [
+        0.11978400611265788,
+        0.2171310913156607
+      ],
+      "mean_api_rank": 10.32624,
+      "mean_brier_score": 0.7595603360496164,
+      "mean_top_choice_accuracy": 0.474,
+      "model": "anthropic/claude-haiku-4-5",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 0.99997,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.41390026268564606,
+        0.5345489443378119
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        10,
+        12
+      ],
+      "brier_95_interval": [
+        0.6777290966573206,
+        0.8495638205815248
+      ],
+      "brier_delta_vs_luna": 0.043305427515229276,
+      "brier_delta_vs_luna_95_interval": [
+        0.02325371080416546,
+        0.06372426113380456
+      ],
+      "brier_delta_vs_point_best": 0.17163223443999986,
+      "brier_delta_vs_point_best_95_interval": [
+        0.11869551957086484,
+        0.2253662549339788
+      ],
+      "mean_api_rank": 10.70141,
+      "mean_brier_score": 0.7634553024399999,
+      "mean_top_choice_accuracy": 0.464,
+      "model": "openai/gpt-5.4",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 0.99672,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.402020202020202,
+        0.5269236526946107
+      ]
+    },
+    {
+      "api_rank_95_interval": [
+        11,
+        12
+      ],
+      "brier_95_interval": [
+        0.7058957608056703,
+        0.860932441567972
+      ],
+      "brier_delta_vs_luna": 0.06326253139806909,
+      "brier_delta_vs_luna_95_interval": [
+        0.037265384841084305,
+        0.09035415522275178
+      ],
+      "brier_delta_vs_point_best": 0.19158933832283975,
+      "brier_delta_vs_point_best_95_interval": [
+        0.13982339069093438,
+        0.24419099449355136
+      ],
+      "mean_api_rank": 11.93897,
+      "mean_brier_score": 0.7834124063228398,
+      "mean_top_choice_accuracy": 0.473,
+      "model": "openai/gpt-5.4-nano",
+      "point_best_api_model": "anthropic/claude-sonnet-5-xhigh",
+      "probability_beats_last_ward_baseline": 0.99644,
+      "probability_best_api_model": 0.0,
+      "top_choice_accuracy_95_interval": [
+        0.412109375,
+        0.5344827586206896
+      ]
+    },
+    {
+      "brier_95_interval": [
+        0.7887659289067741,
+        0.799639125337108
+      ],
+      "mean_brier_score": 0.7944666666666668,
+      "mean_top_choice_accuracy": 0.20553333333333332,
+      "model": "baseline/uniform",
+      "top_choice_accuracy_95_interval": [
+        0.2003608746628921,
+        0.21123407109322603
+      ]
+    },
+    {
+      "brier_95_interval": [
+        0.7545793385388557,
+        0.8869043965959023
+      ],
+      "mean_brier_score": 0.8204313662314933,
+      "mean_top_choice_accuracy": 0.43389999999999995,
+      "model": "baseline/last-ward-party-share",
+      "top_choice_accuracy_95_interval": [
+        0.3728177778716692,
+        0.49585034719281906
+      ]
+    }
+  ],
+  "interval": "percentile 95%",
+  "method": "paired nonparametric cluster bootstrap over organisations",
+  "notes": [
+    "Every replicate resamples the same organisation clusters for every forecaster.",
+    "Each sampled organisation contributes all of its questions; organisations are sampled with replacement.",
+    "Intervals capture organisation-sampling uncertainty only.",
+    "They do not capture model sampling variance because each cell has one API call."
+  ],
+  "organisation_count": 95,
+  "question_count": 500,
+  "replicates": 100000,
+  "resampling_unit": "organisation",
+  "seed": 20260723
+}
