@@ -1,0 +1,31 @@
+{
+  "cases": [
+    {
+      "ballot_paper_id": "local.huntingdonshire.great-staughton.2026-05-07",
+      "question_id": "huntingdonshire_great-staughton",
+      "reason": "greatest total candidate-statement length"
+    },
+    {
+      "ballot_paper_id": "local.oxford.northfield-brook.2026-05-07",
+      "question_id": "oxford_northfield-brook",
+      "reason": "most candidate-plus-ward history records"
+    },
+    {
+      "ballot_paper_id": "local.southend-on-sea.eastwood-park.2026-05-07",
+      "question_id": "southend-on-sea_eastwood-park",
+      "reason": "greatest candidate count, then public-link count and serialized size"
+    },
+    {
+      "ballot_paper_id": "local.newcastle-under-lyme.keele.2026-05-07",
+      "question_id": "newcastle-under-lyme_keele",
+      "reason": "least supplied candidate and history information"
+    },
+    {
+      "ballot_paper_id": "local.tamworth.glascote.2026-05-07",
+      "question_id": "tamworth_glascote",
+      "reason": "lowest deterministic audit hash among remaining packets"
+    }
+  ],
+  "sample_size": 5,
+  "selection_seed": "votecastbench-uk-local-500-v1"
+}

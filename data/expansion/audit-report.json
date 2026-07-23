@@ -1,0 +1,99 @@
+{
+  "artifact_sha256": {
+    "api_lineage": "de1b4e030975dfadbbaa7e7b58ee22d55faab456514cef0070e79d6a6d682e68",
+    "labels": "56d92e2a2cac0da2ef6cbec4d7d4dbc773b38b2a5ec39bbef0dcc8c96a8e5cb1",
+    "questions": "5a6ab482ec84f072dc77f6d699d5d6cea8a54b3522cb64687f1b819fd4f70b18",
+    "selection": "48986f7812e933937cbc57f7f6da55ade9bc17e31b6394d141a688ea6d3dcc08"
+  },
+  "automated_checks": {
+    "api_lineage": "pass",
+    "cached_api_records_checked": 500,
+    "candidate_history_records_checked": 2736,
+    "historical_export_reconciliation": "pass",
+    "maximum_prompt_characters": 20553,
+    "minimum_prompt_characters": 4796,
+    "provider_web_tools_attached": false,
+    "rationale_length_restriction_present": false,
+    "rendered_prompt_leakage_scan": "pass",
+    "rendered_prompts_checked": 500,
+    "strict_dataset_validation": "pass",
+    "unique_prompt_hashes": 500,
+    "ward_history_records_checked": 1306
+  },
+  "dataset_summary": {
+    "candidate_count": 2491,
+    "organisation_count": 95,
+    "question_count": 500,
+    "region_count": 9
+  },
+  "launch_gate_passed": true,
+  "manual_audit": {
+    "acceptance_rule": "Zero critical or major findings; benign display-name normalization and retired source URLs may be recorded as minor notes.",
+    "cases": [
+      {
+        "candidate_source": "https://www.huntingdonshire.gov.uk/media/2dfmxerb/statement-of-persons-nominated-district-council-7-may-2026.pdf",
+        "candidate_source_date": "2026-04-10",
+        "candidate_source_sha256": "ab22be3de01d70e7bcc2089a530239c680b3f2b067a5d7f1e35d434f82bbf498",
+        "candidate_source_visual_review": "PDF page 7 rendered and inspected",
+        "finding": "All five candidates and parties match. Stephen Cawley is the unique winner with 566 votes; all five label totals and turnout match.",
+        "question_id": "huntingdonshire_great-staughton",
+        "result_source": "https://www.huntingdonshire.gov.uk/election-2026/may-2026-election-results/great-staughton-ward/",
+        "result_source_sha256": "e695692fbb036cbb4543d386d73c0851729728c96c1ae6de656e9d6c21abc8c1",
+        "status": "pass"
+      },
+      {
+        "candidate_source": "https://www.oxford.gov.uk/elections-voting/candidates-list-contested-elections-7-may-2026",
+        "candidate_source_sha256": "9bb762dc976ace9b049d44fa3b84ed291046e63fd30004f8178f5dcee707a3e2",
+        "finding": "All five candidates and parties match. Trish Elphinstone is the unique winner with 488 votes; all five label totals and turnout match.",
+        "question_id": "oxford_northfield-brook",
+        "result_source": "https://www.oxford.gov.uk/elections-voting/oxford-city-council-election-results-7-may-2026",
+        "result_source_sha256": "07d4bf7ce1630005ae38c695b76f31236c0403cfccb1e7c051a7bd51d515efca",
+        "status": "pass"
+      },
+      {
+        "candidate_source": "https://www.southend.gov.uk/downloads/file/9407/statement-of-persons-nominated-southend-on-sea-city-council-7-may-2026",
+        "candidate_source_date": "2026-04-10",
+        "candidate_source_fallback": "https://agrayarea.info/candidates/2026/Southend.pdf",
+        "candidate_source_fallback_sha256": "957bfc2acd357fc83973776f1c6369c52dc530ff43672fc73459abeb9062ff5d",
+        "candidate_source_visual_review": "Archived copy of official PDF page 4 rendered and inspected",
+        "finding": "All six candidates, parties, label totals, and the 1,717-vote winner Robert McMullan match. The source says Roger Thomas Weaver while the packet uses the established person display name Roger Weaver. The council nomination asset is now retired, so an indexed archival copy was inspected.",
+        "question_id": "southend-on-sea_eastwood-park",
+        "result_source": "https://www.southend.gov.uk/elections-registering-vote/election-results-1",
+        "status": "pass_with_minor_notes"
+      },
+      {
+        "candidate_source": "https://www.newcastle-staffs.gov.uk/downloads/file/3782/statement-of-persons-nominated-keele",
+        "candidate_source_date": "2026-04-09",
+        "candidate_source_fallback": "https://candidates.democracyclub.org.uk/media/official_documents/local.newcastle-under-lyme.keele.2026-05-07/sopn/2026-04-09T17%3A52%3A09.941853%2B00%3A00/local.newcastle-under-lyme.keele.2026-05-07-sopn.pdf",
+        "candidate_source_fallback_sha256": "b27f40e04b1f16a3d1594b25a9606048b105e5bc6fa135cbc915faa9ce9a0c0c",
+        "finding": "All four candidates, parties, label totals, and the 143-vote winner Dave Jones match. The official document includes Wenslie Dee Naylon while the packet uses the established person display name Wenslie Naylon. The original council nomination URL is retired; the exact contemporaneous PDF is archived.",
+        "question_id": "newcastle-under-lyme_keele",
+        "result_source": "https://www.newcastle-staffs.gov.uk/downloads/file/3900/keele",
+        "result_source_sha256": "2123bfc351ff84709edb81bcfe69e3a7ab2883a368a04ca57e10f20c46aa8575",
+        "status": "pass_with_minor_notes"
+      },
+      {
+        "candidate_source": "https://www.tamworth.gov.uk/sites/default/files/councillors_docs/03-Statement-of-Persons-Nominated-(All%20Wards).docx",
+        "candidate_source_date": "2026-04-09",
+        "candidate_source_sha256": "8c43901016dd155056b0e565c8bfe876a16c23eff7cea53e3272728ec7a60e03",
+        "finding": "All four candidates, parties, label totals, turnout, and the 1,014-vote winner Mark Anthony Abley match. The malformed API candidate-source filename was corrected for all six Tamworth packets. The formal declaration is dated 8 May; resolved_on follows the benchmark-wide poll-date policy and records 7 May.",
+        "question_id": "tamworth_glascote",
+        "result_source": "https://www.tamworth.gov.uk/sites/default/files/councillors_docs/Declaration-of-Results-(All-Wards).pdf",
+        "result_source_sha256": "d3e41b94d1421d118b1d1e83298146561625e57c953bcead56f9a7d7c026ecde",
+        "status": "pass_with_minor_notes"
+      }
+    ],
+    "reviewed_at": "2026-07-23T15:35:05Z",
+    "selection_rule": [
+      "greatest total candidate-statement length",
+      "most candidate-plus-ward history records",
+      "greatest candidate count, then public-link count and serialized size",
+      "least supplied candidate and history information",
+      "lowest deterministic audit hash among remaining packets"
+    ]
+  },
+  "overlap_with_original_20": 0,
+  "resolution_date_policy": "resolved_on records the target poll/event date. It is not a result-page publication timestamp; some formal declarations are dated the following day.",
+  "selection_is_fresh": true,
+  "status": "pass"
+}
