@@ -120,4 +120,6 @@ def test_cost_and_manifest_coverage() -> None:
         "historical_non_panel_calls": 0.6,
         "probe": 0.2,
     }
+    assert manifest["panel_attempt_count"] == 1
+    assert manifest["panel_observations_with_retries"] == 0
     assert manifest["cumulative_estimated_cost_usd"] == 1.2

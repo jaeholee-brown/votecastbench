@@ -125,9 +125,14 @@ def build_panel_manifest(
     token_usage: dict[str, dict[str, int]] = defaultdict(
         lambda: {"input_tokens": 0, "output_tokens": 0}
     )
+    attempt_counts: dict[str, int] = defaultdict(int)
+    retry_counts: dict[str, int] = defaultdict(int)
     for row in cell_map.values():
         model_id = str(row["model"])
         model_costs[model_id] += estimate_record_cost(row, spec_map[model_id])
+        attempts = int(row.get("attempts", 1))
+        attempt_counts[model_id] += attempts
+        retry_counts[model_id] += int(attempts > 1)
         usage = row.get("usage", {})
         token_usage[model_id]["input_tokens"] += int(usage.get("input_tokens", 0))
         token_usage[model_id]["output_tokens"] += int(usage.get("output_tokens", 0))
@@ -154,11 +159,15 @@ def build_panel_manifest(
                 "inference_config": inference_config(spec_map[model_id]),
                 "inference_config_sha256": canonical_sha256(inference_config(spec_map[model_id])),
                 "usage": token_usage[model_id],
+                "attempt_count": attempt_counts[model_id],
+                "observations_with_retries": retry_counts[model_id],
                 "estimated_cost_usd": round(model_costs[model_id], 6),
             }
             for model_id in model_ids
         },
         "panel_estimated_cost_usd": round(panel_cost, 6),
+        "panel_attempt_count": sum(attempt_counts.values()),
+        "panel_observations_with_retries": sum(retry_counts.values()),
         "additional_costs_usd": {
             label: round(cost, 6) for label, cost in sorted(additional_costs.items())
         },

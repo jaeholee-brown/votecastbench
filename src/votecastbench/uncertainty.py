@@ -138,6 +138,8 @@ def bootstrap_report(
 
     baseline_index = model_ids.index("baseline/last-ward-party-share")
     luna_index = model_ids.index("openai/gpt-5.6-luna")
+    point_means = [sum(values) / question_count for values in matrix]
+    point_best_index = min(api_indexes, key=lambda index: (point_means[index], model_ids[index]))
     results = []
     for index, model_id in enumerate(model_ids):
         ordered_samples = sorted(samples[index])
@@ -201,6 +203,22 @@ def bootstrap_report(
             result["brier_delta_vs_luna_95_interval"] = [
                 percentile(deltas, 0.025),
                 percentile(deltas, 0.975),
+            ]
+            best_deltas = sorted(
+                value - best
+                for value, best in zip(
+                    samples[index],
+                    samples[point_best_index],
+                    strict=True,
+                )
+            )
+            result["point_best_api_model"] = model_ids[point_best_index]
+            result["brier_delta_vs_point_best"] = (
+                point_means[index] - point_means[point_best_index]
+            )
+            result["brier_delta_vs_point_best_95_interval"] = [
+                percentile(best_deltas, 0.025),
+                percentile(best_deltas, 0.975),
             ]
         results.append(result)
     clustered = resampling_unit == "organisation"

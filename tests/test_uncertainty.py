@@ -25,6 +25,8 @@ def test_paired_bootstrap_reports_intervals_and_rank_stability() -> None:
     assert rows["openai/gpt-5.6-luna"]["probability_best_api_model"] == 1
     assert rows["openai/gpt-5.6-luna"]["api_rank_95_interval"] == [1, 1]
     assert rows["openai/other"]["brier_delta_vs_luna_95_interval"][0] >= 0
+    assert rows["openai/other"]["point_best_api_model"] == "openai/gpt-5.6-luna"
+    assert rows["openai/other"]["brier_delta_vs_point_best_95_interval"][0] >= 0
     assert report["resampling_unit"] == "question"
     assert report["organisation_count"] is None
 
