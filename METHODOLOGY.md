@@ -108,20 +108,39 @@ The run on 23 July 2026 used:
 
 | Model | Provider setting | Knowledge cutoff |
 |---|---|---|
-| `gpt-5.4-nano` | reasoning effort `high` | 31 Aug 2025 |
+| `gpt-5.2-2025-12-11` | reasoning effort `high` | 31 Aug 2025 |
+| `gpt-5.4-2026-03-05` | reasoning effort `high` | 31 Aug 2025 |
 | `gpt-5.4-mini` | reasoning effort `high` | 31 Aug 2025 |
+| `gpt-5.4-nano` | reasoning effort `high` | 31 Aug 2025 |
+| `gpt-5.5-2026-04-23` | reasoning effort `high` | 1 Dec 2025 |
 | `gpt-5.6-luna` | reasoning effort `high` | 16 Feb 2026 |
+| `gpt-5.6-sol` | reasoning effort `high` | 16 Feb 2026 |
+| `gpt-5.6-terra` | reasoning effort `high` | 16 Feb 2026 |
 | `claude-haiku-4-5-20251001` | extended thinking, 4,096 tokens | reliable: Feb 2025; training: Jul 2025 |
+| `claude-sonnet-4-5-20250929` | extended thinking, 10,000 tokens | reliable: Feb 2025; training: Jul 2025 |
+| `claude-sonnet-4-6` | adaptive thinking, effort `max` | reliable: Aug 2025; training: Jan 2026 |
+| `claude-sonnet-5` | adaptive thinking, effort `xhigh` | Jan 2026 |
 
-OpenAI returned the resolved snapshots `gpt-5.4-nano-2026-03-17` and
-`gpt-5.4-mini-2026-03-17`; Luna returned its undated ID. The Claude ID is a
-pinned snapshot. Model documentation and run-date token prices are recorded in
-`configs/models.json`.
+Every OpenAI model used the regular `high` reasoning tier. Sonnet 4.6 used its
+highest supported `max` tier. Sonnet 5 `max` produced no final answer even
+after raising the combined thinking/output allowance to 32,000 tokens, so the
+scorable panel uses the next-highest `xhigh` tier with the same allowance.
+Sonnet 4.5 does not support adaptive effort and instead used a 10,000-token
+manual thinking budget. Model documentation and run-date token prices are
+recorded in `configs/models.json`.
 
-Calls used async concurrency 32 with up to three attempts. The runner is
-resumable and records requested and resolved model IDs, response IDs, usage,
-latency, timestamps, prompt hashes, and validated forecast objects. It does not
+The expansion wave used async concurrency 128 with up to three attempts.
+Twelve calls that encountered Anthropic's grammar-compilation limit were
+resumed at concurrency 12; completed cells were not repeated. The runner
+records requested and resolved model IDs, response IDs, usage, latency,
+timestamps, prompt hashes, question hashes, full inference-configuration
+hashes, stable observation IDs, and validated forecast objects. It does not
 store credentials or hidden chain-of-thought.
+
+`results/panel/predictions.jsonl` is append-safe: adding questions and rerunning
+all configured models schedules only missing observation IDs. The accompanying
+manifest records all expected cells, missing or failed cells, per-model token
+usage and price estimates, and cumulative non-panel costs.
 
 This pilot uses one stochastic call per question/model/format. Replicated runs
 would be needed to quantify sampling variance.
@@ -135,4 +154,3 @@ same-post result, maps Labour and Labour & Co-operative to one party family,
 and adds smoothing equal to 1% of the prior valid-vote total to every current
 candidate before normalization. It uses no candidate identity or profile
 information.
-

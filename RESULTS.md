@@ -2,22 +2,30 @@
 
 ## Protected winner-only benchmark
 
-All 80 model forecasts completed and passed output validation. Lower Brier is
-better.
+All 240 API forecasts completed and passed output validation. Lower Brier is
+better. Per-model cost covers the 20 successful panel forecasts and uses the
+run-date prices in `configs/models.json`.
 
-| Rank | Forecaster | Mean Brier | Top-choice accuracy | Mean probability on winner |
-|---:|---|---:|---:|---:|
-| 1 | GPT-5.6 Luna | **0.5306** | **70%** | **0.4800** |
-| 2 | Claude Haiku 4.5 | 0.5962 | 65% | 0.4487 |
-| — | Last-ward party-share baseline | 0.6056 | 65% | 0.3667 |
-| 3 | GPT-5.4 nano | 0.6325 | 60% | 0.4140 |
-| 4 | GPT-5.4 mini | 0.6507 | 65% | 0.3955 |
-| — | Uniform baseline | 0.8133 | 18.7% | 0.1867 |
+| Rank | Forecaster | Inference setting | Mean Brier | Top-choice accuracy | Mean probability on winner | Est. cost |
+|---:|---|---|---:|---:|---:|---:|
+| 1 | GPT-5.6 Luna | high | **0.5306** | **70%** | 0.4800 | $0.22 |
+| 2 | GPT-5.6 Terra | high | 0.5418 | 65% | 0.4673 | $0.39 |
+| 3 | Claude Sonnet 4.6 | adaptive max | 0.5660 | 60% | 0.4240 | $1.60 |
+| 4 | Claude Sonnet 4.5 | 10k thinking | 0.5692 | 60% | 0.4565 | $1.03 |
+| 5 | GPT-5.6 Sol | high | 0.5720 | **70%** | **0.4895** | $1.28 |
+| 6 | GPT-5.5 | high | 0.5740 | 65% | 0.4738 | $2.71 |
+| 7 | Claude Sonnet 5 | adaptive xhigh | 0.5769 | 67.5% | 0.4170 | $1.21 |
+| 8 | Claude Haiku 4.5 | 4,096 thinking | 0.5962 | 65% | 0.4487 | $0.38 |
+| 9 | Last-ward party-share baseline | deterministic | 0.6056 | 65% | 0.3667 | — |
+| 10 | GPT-5.4 | high | 0.6230 | 60% | 0.4598 | $1.75 |
+| 11 | GPT-5.2 | high | 0.6295 | 65% | 0.4232 | $0.51 |
+| 12 | GPT-5.4 nano | high | 0.6325 | 60% | 0.4140 | $0.06 |
+| 13 | GPT-5.4 mini | high | 0.6507 | 65% | 0.3955 | $0.60 |
+| 14 | Uniform baseline | deterministic | 0.8133 | 18.7% | 0.1867 | — |
 
-Only Luna clearly beat the simple local-history baseline in this one-run,
-20-question sample. Haiku was slightly better by Brier, while nano and mini
-were worse. These differences should not be overinterpreted without more
-questions and repeated samples.
+Seven of the twelve API models beat the simple local-history baseline on this
+run. GPT-5.6 Luna remained first, with Terra second. These differences should
+not be overinterpreted without more questions and repeated samples.
 
 ## Did vote-share and turnout targets muddy winner forecasts?
 
@@ -44,27 +52,36 @@ remains available as a secondary metric for explicitly joint runs.
 
 ## Usage and approximate cost
 
-The full winner-only run consumed:
+| Model | Input tokens | Output tokens | Est. cost |
+|---|---:|---:|---:|
+| Claude Haiku 4.5 | 87,321 | 57,678 | $0.38 |
+| Claude Sonnet 4.5 | 87,321 | 51,400 | $1.03 |
+| Claude Sonnet 4.6 | 92,808 | 88,355 | $1.60 |
+| Claude Sonnet 5 | 114,452 | 98,143 | $1.21 |
+| GPT-5.2 | 74,795 | 26,843 | $0.51 |
+| GPT-5.4 | 74,795 | 103,902 | $1.75 |
+| GPT-5.4 mini | 74,795 | 120,690 | $0.60 |
+| GPT-5.4 nano | 74,795 | 35,748 | $0.06 |
+| GPT-5.5 | 74,795 | 77,823 | $2.71 |
+| GPT-5.6 Luna | 74,795 | 23,993 | $0.22 |
+| GPT-5.6 Sol | 74,795 | 30,242 | $1.28 |
+| GPT-5.6 Terra | 74,795 | 13,766 | $0.39 |
+| **Successful panel total** | **980,262** | **728,583** | **$11.74** |
 
-| Model | Input tokens | Output tokens |
-|---|---:|---:|
-| Claude Haiku 4.5 | 87,321 | 57,678 |
-| GPT-5.4 mini | 74,795 | 120,690 |
-| GPT-5.4 nano | 74,795 | 35,748 |
-| GPT-5.6 Luna | 74,795 | 23,993 |
-
-Using the run-date list prices recorded in `configs/models.json`, the full
-80-call run cost approximately **$1.25**. The 20 additional joint-format calls
-used by the ablation cost approximately **$0.47**, for about **$1.73** across
-the committed unique API calls. Estimates include provider-reported output
-tokens, including reasoning/thinking where billed, and exclude any account
-discounts.
+The earlier joint-format ablation cost about $0.47. Sonnet 5 `max` spent its
+entire response allowance on thinking and produced no forecast in three probes;
+their conservative allowance-based upper bound is $0.78. Including both
+items, estimated cumulative API spend is **$12.99**, well below the $50
+reference budget. The estimate includes provider-reported reasoning/thinking
+tokens where available and excludes account discounts. The machine-readable
+breakdown is in `results/panel/manifest.json`.
 
 ## Artifacts
 
-- `results/full/predictions.jsonl`: 80 raw validated winner-only forecasts
-- `results/full/scores.json`: aggregate and question-level scores
+- `results/panel/predictions.jsonl`: 240 raw validated winner-only forecasts
+- `results/panel/scores.json`: aggregate and question-level panel scores
+- `results/panel/manifest.json`: hashes, coverage, usage, and cumulative costs
+- `results/full/`: original four-model artifacts retained unchanged
 - `results/ablation/predictions.jsonl`: 40 paired-format forecasts
 - `results/ablation/scores.json`: aggregate and paired question-level scores
 - `results/baselines/`: deterministic forecasts and scores
-

@@ -13,17 +13,25 @@ so those targets are retained only as an exploratory secondary track.
 
 ## Headline results
 
-Lower Brier score is better. Each model made one high-effort forecast for each
-of the 20 questions.
+Lower Brier score is better. Each API model made one high-effort forecast for
+each of the 20 questions. The 240-call panel is complete.
 
-| Forecaster | Brier | Top-choice accuracy |
-|---|---:|---:|
-| GPT-5.6 Luna (high) | **0.5306** | **70%** |
-| Claude Haiku 4.5 (4,096 thinking tokens) | 0.5962 | 65% |
-| Last-ward party-share baseline | 0.6056 | 65% |
-| GPT-5.4 nano (high) | 0.6325 | 60% |
-| GPT-5.4 mini (high) | 0.6507 | 65% |
-| Uniform baseline | 0.8133 | 18.7% |
+| Forecaster | Inference setting | Brier | Top-choice accuracy |
+|---|---|---:|---:|
+| GPT-5.6 Luna | high | **0.5306** | **70%** |
+| GPT-5.6 Terra | high | 0.5418 | 65% |
+| Claude Sonnet 4.6 | adaptive max | 0.5660 | 60% |
+| Claude Sonnet 4.5 | 10k thinking | 0.5692 | 60% |
+| GPT-5.6 Sol | high | 0.5720 | **70%** |
+| GPT-5.5 | high | 0.5740 | 65% |
+| Claude Sonnet 5 | adaptive xhigh | 0.5769 | 67.5% |
+| Claude Haiku 4.5 | 4,096 thinking | 0.5962 | 65% |
+| Last-ward party-share baseline | deterministic | 0.6056 | 65% |
+| GPT-5.4 | high | 0.6230 | 60% |
+| GPT-5.2 | high | 0.6295 | 65% |
+| GPT-5.4 nano | high | 0.6325 | 60% |
+| GPT-5.4 mini | high | 0.6507 | 65% |
+| Uniform baseline | deterministic | 0.8133 | 18.7% |
 
 See [RESULTS.md](RESULTS.md) for the output-format ablation, token use, and
 interpretation. This is a 20-question pilot, not a definitive model ranking.
@@ -53,16 +61,28 @@ uv run votecastbench run \
   --env-file ../rl-env-benchmark/.env \
   --output results/full/predictions.jsonl \
   --formats winner_only \
-  --concurrency 32 \
+  --concurrency 128 \
   --attempts 3
 ```
 
-Score a run:
+Pool older results into the append-safe panel, run only missing cells, and
+score the combined panel:
 
 ```bash
+uv run votecastbench pool \
+  --input results/full/predictions.jsonl \
+  --output results/panel/predictions.jsonl
+
+uv run votecastbench run \
+  --env-file ../rl-env-benchmark/.env \
+  --output results/panel/predictions.jsonl \
+  --formats winner_only \
+  --concurrency 128 \
+  --attempts 3
+
 uv run votecastbench score \
-  --predictions results/full/predictions.jsonl \
-  --output results/full/scores.json
+  --predictions results/panel/predictions.jsonl \
+  --output results/panel/scores.json
 ```
 
 Rebuild the curated data from Democracy Club:
@@ -77,7 +97,8 @@ uv run python scripts/curate.py
 - `data/labels.jsonl`: resolved outcomes, withheld during forecasting
 - `configs/models.json`: provider IDs, high-effort settings, cutoffs, and prices
 - `src/votecastbench/`: validation, prompting, async runners, and scoring
-- `results/`: committed raw predictions and score reports
+- `results/panel/`: pooled raw predictions, scores, coverage, and costs
+- `results/full/`: original four-model result set retained for provenance
 - `METHODOLOGY.md`: curation, leakage controls, and metric definitions
 
 ## Data source and caveat
@@ -90,4 +111,3 @@ exclude late statements and profile edits, but this pilot is not a
 cryptographically archived pre-election snapshot. Read the limitations in
 [METHODOLOGY.md](METHODOLOGY.md) before treating it as a contamination-proof
 evaluation.
-
