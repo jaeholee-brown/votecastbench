@@ -91,15 +91,15 @@
     "documentation": "https://platform.claude.com/docs/en/about-claude/models/overview"
   },
   {
-    "id": "anthropic/claude-sonnet-5-max",
+    "id": "anthropic/claude-sonnet-5-xhigh",
     "provider": "anthropic",
     "model": "claude-sonnet-5",
     "reliable_knowledge_cutoff": "2026-01-31",
     "training_data_cutoff": "2026-01-31",
     "thinking_mode": "adaptive",
-    "anthropic_effort": "max",
+    "anthropic_effort": "xhigh",
     "structured_output": true,
-    "max_output_tokens": 12000,
+    "max_output_tokens": 32000,
     "pricing_usd_per_million_tokens": {"input": 2.0, "output": 10.0},
     "pricing_note": "Introductory standard-context price through 2026-08-31.",
     "documentation": "https://platform.claude.com/docs/en/about-claude/models/overview"

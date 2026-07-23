@@ -35,6 +35,19 @@ def _openai_output_text(response: dict[str, Any]) -> str:
     return "".join(parts)
 
 
+def _anthropic_compatible_schema(value: Any) -> Any:
+    """Remove array bounds unsupported by Anthropic's structured-output dialect."""
+    if isinstance(value, dict):
+        return {
+            key: _anthropic_compatible_schema(child)
+            for key, child in value.items()
+            if key not in {"minItems", "maxItems", "minimum", "maximum"}
+        }
+    if isinstance(value, list):
+        return [_anthropic_compatible_schema(child) for child in value]
+    return value
+
+
 async def call_openai(
     client: httpx.AsyncClient,
     spec: dict[str, Any],
@@ -118,7 +131,12 @@ async def call_anthropic(
     elif thinking_mode == "manual" or thinking_budget:
         body["thinking"] = {"type": "enabled", "budget_tokens": int(thinking_budget)}
     if spec.get("structured_output"):
-        output_config: dict[str, Any] = {"format": {"type": "json_schema", "schema": schema}}
+        output_config: dict[str, Any] = {
+            "format": {
+                "type": "json_schema",
+                "schema": _anthropic_compatible_schema(schema),
+            }
+        }
         if spec.get("anthropic_effort"):
             output_config["effort"] = spec["anthropic_effort"]
         body["output_config"] = output_config
